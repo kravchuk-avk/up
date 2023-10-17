@@ -14,48 +14,64 @@
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="логтип">
         </a>
-        <ul class="header__list">
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Головна
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Страви
-            </a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">
-              Контакти
-            </a>
-          </li>
-        </ul>
-        <ul class="header__items">
-          <li class="header__search">
-            <a class="header__link" href="#" style="background-image: url('images/icon/search-btn.svg')">
-              <span class="sr-only">Пошук</span>
-            </a>
-          </li>
-          <li class="header__cart">
-            <a class="header__link" href="#" style="background-image: url('images/icon/cart-icon.svg')">
-              <span class="header__number">4</span>
-              <span class="sr-only">Корзина</span>
-            </a>
-          </li>
-        </ul>
+        <div class="header__inner">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Головна
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Страви
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Контакти
+              </a>
+            </li>
+          </ul>
+          <ul class="header__tools">
+            <li class="header__search">
+              <a class="header__url" href="#" style="background-image: url('images/icon/search-btn.svg')">
+                <span class="sr-only">
+                  Пошук
+                </span>
+              </a>
+            </li>
+            <li class="header__cart">
+              <a class="header__url" href="#" style="background-image: url('images/icon/cart-icon.svg')">
+                <span class="sr-only">
+                  Корзина
+                </span>
+                <span class="header__number">
+                4
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div class="header__inner">
+      <div class="header__content" style="background-image: url('images/bg-scooter.png')">
           <h1 class="header__title">
-            Вітаю, я Сергій Сірко
+            Доставка
             <span class="header__subtitle">
-              frontend-розробник
+              за 15 ХВИЛИН
             </span>
           </h1>
+          <div class="header__text">
+            <p>
+              Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
+            </p>
+          </div>
+          <button class="btn" type="button">
+            Замовити
+          </button>
+          <button class="btn" type="button">
+            Детальніше
+          </button>
       </div>
-      <a class="header__icon" href="#portfolio">
-        дивитися роботи
-      </a>
     </div>
   </header>
 
