@@ -3,3 +3,23 @@
 @import 'media';
 @import 'reset';
 @import 'vars';
+
+.header {
+  padding: 61px 3px 59px 5px;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 63px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  }
+
