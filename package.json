@@ -18,5 +18,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1"
+  },
+  "dependencies": {
+    "svgstore": "^3.0.1"
   }
 }
