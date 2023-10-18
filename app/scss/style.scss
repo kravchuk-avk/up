@@ -9,7 +9,8 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
+    text-align: center;
+    padding: 70px 5px 58px 13px;
   }
 
   &__inner {
@@ -19,6 +20,12 @@
   &__list {
     display: flex;
     margin-right: 63px;
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.18px;
   }
 
   &__item:not(:last-child) {
@@ -33,24 +40,38 @@
 
   &__url {
   display: block;
-  width: 19px;
-  height: 19px;
-  padding: 3px;
+  width: 21px;
+  height: 21px;
   border-radius: 3px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  transition: box-shadow 0.5s,
-  opacity 0.5s,
-  ease-in-out;
-
+  position: relative;
+  // padding: 13px;
   }
 
   &__search {
     margin-right: 33px;
   }
 
- &__content {
+  &__number {
+    position: absolute;
+    top: -2px;
+    left: calc(50% + 5px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #FF6838;
+    color: #FFF;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__content {
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto;
