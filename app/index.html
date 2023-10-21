@@ -10,42 +10,42 @@
 <body id="body">
   <header class="header">
     <div class="container">
-      <nav class="header__menu">
+      <nav class="header__nav">
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="логтип">
         </a>
-        <div class="header__inner">
-          <ul class="header__list">
-            <li class="header__item">
-              <a class="header__link" href="#">
+        <div class="header__nav-inner">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">
                 Головна
               </a>
             </li>
-            <li class="header__item">
-              <a class="header__link" href="#">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">
                 Страви
               </a>
             </li>
-            <li class="header__item">
-              <a class="header__link" href="#">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">
                 Контакти
               </a>
             </li>
           </ul>
-          <ul class="header__tools">
-            <li class="header__search">
-              <a class="header__url" href="#" style="background-image: url('images/icon/search.svg')">
+          <ul class="header__tools-list">
+            <li class="header__tools-search">
+              <a class="header__tools-link" href="#" style="background-image: url('images/icon/search.svg')">
                 <span class="sr-only">
                   Пошук
                 </span>
               </a>
             </li>
-            <li class="header__cart">
-              <a class="header__url" href="#" style="background-image: url('images/icon/cart.svg')">
+            <li class="header__tools-cart">
+              <a class="header__tools-link" href="#" style="background-image: url('images/icon/cart.svg')">
                 <span class="sr-only">
                   Корзина
                 </span>
-                <span class="header__number">
+                <span class="header__tools-number">
                 4
                 </span>
               </a>
@@ -53,30 +53,51 @@
           </ul>
         </div>
       </nav>
-      <div class="header__content" style="background-image: url('images/bg-header.png')">
-        <div class="header__content-inner">
-          <h1 class="header__title">
-            Доставка
-            <span class="header__subtitle">
-              за 15 ХВИЛИН
-            </span>
-          </h1>
-          <div class="header__text">
-            <p>
-              Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
-            </p>
-          </div>
-          <button class="btn" type="button">
-            Замовити
-          </button>
-          <!-- <button class="btn" type="button">
-            Детальніше
-          </button> -->
-        </div>
-      </div>
     </div>
   </header>
   <main class="main">
+
+    <section class="hero section">
+      <div class="container">
+        <div class="hero__content" style="background-image: url('images/bg-hero.png')">
+          <div class="hero__content-inner">
+            <h1 class="hero__title">
+              Доставка
+              <span class="hero__subtitle">
+                за 15 ХВИЛИН
+              </span>
+            </h1>
+            <div class="hero__text">
+              <p>
+              Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
+              </p>
+            </div>
+
+
+            
+          <ul class="hero__content-list">
+            <li class="hero__item">
+              <a class="btn" href="#">
+                Замовити
+              </a>
+            </li>
+            <li class="hero__item">
+              <a class="" href="#">
+                Детальніше
+              </a>
+            </li>
+          </ul>
+
+
+            <!-- <button class="btn" type="button">
+              Замовити
+            </button> -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="categories section">
       <div class="container">
         <h2 class="title">

@@ -4,6 +4,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   color: $default;
+  position: relative;
 }
 
 .container {
@@ -40,12 +41,12 @@ body {
   background-color: #FF6838;
   transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
   border-radius: 5px;
-  display: inline-block;
   font-size: 18px;
-
+display: flex;
 }
+
 .section {
-  padding: 140px 0;
+  padding-bottom: 120px;
 }
 
 .title {
