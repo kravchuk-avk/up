@@ -7,7 +7,7 @@
   <title>Проста їжа</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body id="body">
   <header class="header">
     <div class="container">
       <nav class="header__menu">
@@ -34,14 +34,14 @@
           </ul>
           <ul class="header__tools">
             <li class="header__search">
-              <a class="header__url" href="#" style="background-image: url('images/icon/search-btn.svg')">
+              <a class="header__url" href="#" style="background-image: url('images/icon/search.svg')">
                 <span class="sr-only">
                   Пошук
                 </span>
               </a>
             </li>
             <li class="header__cart">
-              <a class="header__url" href="#" style="background-image: url('images/icon/cart-icon.svg')">
+              <a class="header__url" href="#" style="background-image: url('images/icon/cart.svg')">
                 <span class="sr-only">
                   Корзина
                 </span>
@@ -53,7 +53,7 @@
           </ul>
         </div>
       </nav>
-      <div class="header__content" style="background-image: url('images/bg-scooter.png')">
+      <div class="header__content" style="background-image: url('images/bg-header.png')">
         <div class="header__content-inner">
           <h1 class="header__title">
             Доставка
@@ -69,13 +69,36 @@
           <button class="btn" type="button">
             Замовити
           </button>
-          <button class="btn" type="button">
+          <!-- <button class="btn" type="button">
             Детальніше
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
   </header>
+  <main class="main">
+    <section class="categories section">
+      <div class="container">
+        <h2 class="title">
+          Популярне в категоріях
+        </h2>
+        <div class="about__text">
+          <p>
+            Вітаю всіх на своєму сайті! Мене звати Сергій, я з Івано-Франківська. Займаюся фронтенд-розробкою трохи більше року. До розробки займався нелюбимою справою, ходив на роботу, що не подобалася мені, не міг зрозуміти, як знайти працю за покликанням і робити те, що подобається, заробляючи собі на життя, допоки не знайшов один цікавий курс.
+          </p>
+          <p>
+            З того часу багато чого дізнався, навчання давалося по-різному: десь легше, десь складніше. Щоденна робота над навичками та зусилля, яких я докладав, вже за кілька місяців принесли плоди - вдалось взяти замовлення на фрілансі. З відгуками від задоволених клієнтів та прикладами моїх робіт можна ознайомитися нижче
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <a class="logo" href="#body">
+      <img class="logo__img" src="images/logo.svg" alt="логотип">
+    </a>
+  </footer>
 
 <script src="js/main.min.js"></script>
 </body>
