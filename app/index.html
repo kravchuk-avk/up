@@ -96,23 +96,54 @@
             </button>
           </li> -->
           <li class="categories__filter-item">
-            <button class="categories__filter-btn" type="button" data-filter=".category-a" style="background-image: url('images/icon/category-burger.svg')">
+            <button class="categories__filter-btn categories__filter-btn--burger" type="button" data-filter=".category-a">
               Бургери
+            </button>
+          </li>
+          <li class="categories__filter-item">
+            <button class="categories__filter-btn categories__filter-btn--pizza" type="button" data-filter=".category-b">
+              Піца
+            </button>
+          </li>
+          <li class="categories__filter-item">
+            <button class="categories__filter-btn categories__filter-btn--sandwich" type="button" data-filter=".category-c">
+              Сендвічі
+            </button>
+          </li>
+          <li class="categories__filter-item">
+            <button class="categories__filter-btn categories__filter-btn--dinner" type="button" data-filter=".category-d">
+              Азійська кухня
+            </button>
+          </li>
+          <li class="categories__filter-item">
+            <button class="categories__filter-btn categories__filter-btn--dish" type="button" data-filter=".category-e">
+              Cети
             </button>
           </li>
         </ul>
 
 
-        <ul class="categories__filter-list anim--items">
+        <ul class="categories__filter-list">
           <li class="categories__filter-inner mix category-a category-b">
-            <a data-fancybox="categories__filter-list" class="categories__filter-link" href="images/portfolio/1.jpg">
-              <img class="categories__filter-img" src="images/portfolio/1.jpg" alt="Венеція">
+            <a data-fancybox="categories__filter-list" class="categories__filter-link" href="images/card/cheese.png">
+              <article class="cheeseburger"> 
+                <img class="cheeseburger__img" src="images/card/cheese.png" alt="Чізбургер з листям салату">
+                <h3 class="cheeseburger__title">
+                  Чізбургер з листям салату
+                </h3>
+                <span class="cheeseburger__price">
+                  160 грн.
+                </span>
+                <button class="btn" type="button">
+                  До кошика
+                </button>
+              </article>
             </a>
           </li>
 
         </ul>
-        <button class="btn anim--items" type="button">
-          Завантажити ще
+        <button class="more" type="button">
+          Показати ще
         </button>
       </div>
     </section>
