@@ -132,6 +132,7 @@ margin-bottom: 20px
   &__filter-list{
     display: flex;
     justify-content: center;
+    margin-bottom: 45px;
   }
 
   &__filter-item {
@@ -179,15 +180,7 @@ margin-bottom: 20px
   &__filter-btn--dish::before {
     background-image: url('../images/icon/category-dish.svg')
   }
-
-  &__filter-inner {
-    max-width: 210px;
-    width: 100%;
-    display: flex;
-    padding: 20px 35px;
-    background-color: $bg-item;
-  }
-
+  
 }
 
 
