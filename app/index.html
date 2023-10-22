@@ -72,27 +72,12 @@
               Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
               </p>
             </div>
-
-
-            
-          <ul class="hero__content-list">
-            <li class="hero__item">
-              <a class="btn" href="#">
-                Замовити
-              </a>
-            </li>
-            <!-- <li class="hero__item">
-              <a class="" href="#">
+            <button class="button" type="button">
+              Замовити
+            </button>
+              <a class="more" href="#">
                 Детальніше
               </a>
-            </li> -->
-          </ul>
-
-
-            <!-- <button class="btn" type="button">
-              Замовити
-            </button> -->
-
           </div>
         </div>
       </div>
@@ -103,6 +88,35 @@
         <h2 class="title">
           Популярне в категоріях
         </h2>
+
+        <ul class="categories__filter-list">
+          <!-- <li class="categories__filtr-item">
+            <button class="categories__filtr-btn" type="button" data-filter="all">
+              Усі роботи
+            </button>
+          </li> -->
+          <li class="categories__filter-item">
+            <button class="categories__filter-btn" type="button" data-filter=".category-a" style="background-image: url('images/icon/category-burger.svg')">
+              Бургери
+            </button>
+          </li>
+        </ul>
+
+
+        <ul class="categories__filter-list anim--items">
+          <li class="categories__filter-inner mix category-a category-b">
+            <a data-fancybox="categories__filter-list" class="categories__filter-link" href="images/portfolio/1.jpg">
+              <img class="categories__filter-img" src="images/portfolio/1.jpg" alt="Венеція">
+            </a>
+          </li>
+
+        </ul>
+        <button class="btn anim--items" type="button">
+          Завантажити ще
+        </button>
+      </div>
+    </section>
+
 
       </div>
     </section>
