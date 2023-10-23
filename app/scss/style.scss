@@ -153,12 +153,12 @@ margin-bottom: 20px
     line-height: 1.3;
   }
 
-    &__filter-btn::before {
-      content: "";
-      background: no-repeat center / contain;
-      width: 44px;
-      height: 44px;
-      margin-right: 10px;
+  &__filter-btn::before {
+    content: "";
+    background: no-repeat center / contain;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
 }
 
 &__filter-btn--burger::before {
@@ -181,7 +181,16 @@ margin-bottom: 20px
     background-image: url('../images/icon/category-dish.svg')
   }
   
-}
+  &__product-list {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: repeat(auto-fill, 210px);
+      gap: 30px;
+      margin-bottom: 60px;
+  }
 
+
+}
 
   @import 'media';
