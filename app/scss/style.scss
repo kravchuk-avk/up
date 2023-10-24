@@ -3,8 +3,6 @@
 @import 'reset';
 @import 'global';
 
-
-
 .header {
     position: fixed;
     left: 50%;
@@ -123,7 +121,6 @@ margin-bottom: 20px
   &__content-inner .button {
     margin-right: 25px;
   }
-
 }
 
 .categories {
@@ -182,40 +179,51 @@ margin-bottom: 20px
   }
   
   &__product-list {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      grid-template-columns: repeat(auto-fill, 210px);
-      gap: 30px;
-      margin-bottom: 60px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fill, 210px);
+    gap: 30px;
+    margin-bottom: 60px;
   }
-
-
 }
 
 .footer {
-  // background-color: #343740;
-  // padding: 50px 0;
-  // display: flex;
-  // justify-content: center;
 
-&__input {
-  font-size: 14px;
-  line-height: 1.3;
-  color: $border;
-  // display: block;
-  width: 100%;
-  padding: 13px 15px;
-  background-color: $bg-item;
-  transition: box-shadow 0.5s ease-in-out;
-}
+  &__nav {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  &__sub {
+    margin: 7px 73px 0 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin: 30px 0 12px;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 1.3;
+    color: $border;
+    width: 100%;
+    padding: 13px 15px;
+    background-color: $bg-item;
+    transition: box-shadow 0.5s ease-in-out;
+  }
 
 &__input:focus {
   box-shadow: 0px 0px 0px 3px rgba(35, 82, 222, 0.50);
 }
 
 &__input::placeholder {
-  color: #9C9CAB;
+  color: $border;
   transition: color 0.5s ease-in-out;
 }
 
@@ -223,6 +231,139 @@ margin-bottom: 20px
   color: #000000;
 }
 
+  &__btn--telegram {
+    @extend %quicksand-500;
+    font-size: 14px;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    padding: 13px 37px;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
+  }
+
+  &__btn--telegram::before {
+    content: "";
+    background: no-repeat center / contain;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icon/telegram.svg');
+    margin-right: 20px;
+
+  }
+
+  &__menu-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    height: 100%;
+    gap: 20px 91px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.18px;
+    margin-right: 142px;
+  }
+
+&__box {
+  background-color: #343740;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
 }
+
+&__copyright {
+  color: $bg-item;
+
+  // font-family: Rubik;
+  font-size: 14px;
+  // font-style: normal;
+  // font-weight: 400;
+  line-height: 1;
+  /* 14px */
+}
+
+}
+
+.address {
+  font-size: 16px;
+  line-height: 2;
+
+  &__item {
+    margin-bottom: 15px; 
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link::before {
+    content: "";
+    background: no-repeat center / contain;
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+    padding: 3px 3px;
+  }
+
+  &__link--geo::before {
+    background-image: url('../images/icon/location.svg')
+  }
+
+  &__link--tel::before {
+    background-image: url('../images/icon/call.svg')
+  }
+
+  &__link--email::before {
+    background-image: url('../images/icon/message.svg')
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.socials {
+  display: flex;
+}
+
+.socials__inner:not(:last-child) {
+  margin-right: 20px;
+}
+
+.socials__link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition: box-shadow 0.5s, opacity 0.5s, ease-in-out;
+}
+
+.socials__link:hover {
+  opacity: 0.7;
+}
+
+.socials__link:focus {
+  box-shadow: 0px 0px 0px 2px rgba(35, 82, 222, 0.50);
+}
+
+.socials__link:active {
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.15);
+}
+  // &__filter-btn {
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 13px 32px;
+  //   line-height: 1.3;
+  // }
+
 
   @import 'media';

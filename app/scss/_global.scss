@@ -1,3 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   @extend %quicksand-400;
   font-size: 20px;
@@ -6,6 +17,10 @@ body {
   color: $default;
   background-color: $bg-default;
   position: relative;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
