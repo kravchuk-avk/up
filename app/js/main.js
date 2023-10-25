@@ -8,18 +8,18 @@ $(function(){
 
 // });
 
-// $(".logo, .header__link, .header__icon").on("click", function (event) {
-//   event.preventDefault();
-//   var id  = $(this).attr('href'),
-//     top = $(id).offset().top;
-//   $('body,html').animate({scrollTop: top}, 1000);
-// });
+$(".logo, .header__menu-link").on("click", function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1000);
+});
 
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  let scrollPos= 100;
+  let scrollPos= 50;
   let header = document.querySelector('.header');
 
 if(document.body.scrollTop > scrollPos ||
