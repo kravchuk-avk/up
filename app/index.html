@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="Доставка їжі">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Проста їжа</title>
+  <title>Головна сторінка | Сімплфуд - сервіс доставки їжі</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png">
@@ -18,35 +18,38 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
+          <div class="header__nav-inner">
         <nav class="header__nav">
           <a class="logo" href="#body">
-            <img class="logo__img" src="images/logo.png" width="197" height="31" alt="логотип">
+            <img class="logo__img" src="images/logo.svg" width="197" height="31" alt="логотип">
           </a>
-          <div class="header__nav-inner">
-            <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="#">
-                  Головна
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="#">
-                  Страви
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a class="header__menu-link" href="#address">
-                  Контакти
-                </a>
-              </li>
-            </ul>
+          <ul class="menu header__menu">
+            <li class="menu__item header__menu-item">
+              <a class="menu__link" href="#">
+                Головна
+              </a>
+            </li>
+            <li class="menu__item header__menu-item">
+              <a class="menu__link" href="#">
+                Страви
+              </a>
+            </li>
+            <li class="menu__item header__menu-item">
+              <a class="menu__link" href="#address">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
             <ul class="header__tools-list">
               <li class="header__tools-search">
-                <a class="header__tools-link" href="#" style="background-image: url('images/icon/search.svg')">
+                <button class="header__tools-link" href="#" style="background-image: url('images/icon/search.svg')">
                   <span class="sr-only">
                     Пошук
                   </span>
-                </a>
+                </button>
               </li>
               <li class="header__tools-cart">
                 <a class="header__tools-link" href="#" style="background-image: url('images/icon/cart.svg')">
@@ -59,8 +62,9 @@
                 </a>
               </li>
             </ul>
+
           </div>
-        </nav>
+
       </div>
     </header>
     <main class="main">
@@ -298,7 +302,7 @@
         <nav class="footer__nav">
           <div class="footer__sub">
             <a class="logo" href="#body">
-              <img class="logo__img" src="images/logo.png" width="197" height="31" alt="логотип">
+              <img class="logo__img" src="images/logo.svg" width="197" height="31" alt="логотип">
             </a>
             <form class="footer__form" name="footer">
               <label class="footer__label">
@@ -309,64 +313,64 @@
               </button>
             </form>
           </div>
-          <ul class="footer__menu-list">
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+          <ul class="menu footer__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Як це працює
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Про нас
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Застосунок
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Продукти
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Новини
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Блог
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Страви
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Партнери
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Що нового?
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Меню
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 ЧаПи
               </a>
             </li>
-            <li class="footer__menu-item">
-              <a class="footer__menu-link" href="#">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
                 Мапа сайту
               </a>
             </li>
@@ -374,17 +378,17 @@
           <address class="address" id="address">
             <ul class="address__list">
               <li class="address__item">
-                <a class="address__link address__link--geo" href="geo:#">
+                <a class="address__link menu__link address__link--geo" href="geo:#">
                   вул. Т.Г.Шевченка, 1
                 </a>
               </li>
               <li class="address__item">
-                <a class="address__link address__link--tel" href="tel:+380501112233">
+                <a class="address__link menu__link address__link--tel" href="tel:+380501112233">
                   380501112233
                 </a>
               </li>
               <li class="address__item">
-                <a class="address__link address__link--email" href="mailto:support@sfood.com">
+                <a class="address__link menu__link address__link--email" href="mailto:support@sfood.com">
                   support@sfood.com
                 </a>
               </li>
@@ -425,8 +429,8 @@
     </footer>
 
   </div>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
+  <!-- <script src="js/mixitup.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>
 </html> 

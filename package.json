@@ -17,6 +17,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "sass": "^1.69.5",
     "jquery": "^3.7.1",
     "mixitup": "^3.3.1"
   },
