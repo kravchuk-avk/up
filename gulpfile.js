@@ -21,7 +21,7 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({outputStyle: 'expanded'}))
+  .pipe(scss({outputStyle: 'compressed'}))
   .pipe(concat('style.min.css'))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 10 versions'],
@@ -34,6 +34,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
