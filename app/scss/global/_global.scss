@@ -1,0 +1,98 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  @extend %font-400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+  color: $default;
+  background-color: $bg-default;
+  position: relative;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding-bottom: 120px;
+}
+
+.title {
+  @extend %font-500;
+  color: $title;
+  font-size: 36px;
+  line-height: 1.3;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.product-card {
+  max-width: 210px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: $bg-item;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px $bs-item;
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $accent;
+  }
+
+  &__link {
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    margin: 0 auto 10px;
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  &__price {
+    @extend %font-500;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+}
+

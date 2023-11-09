@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  width: 100%;
+  padding: 60px 0 60px 5px;
+  z-index: 1;
+  transition: padding 1.5s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &--active {
+    padding: 20px 12px 20px 5px;
+    color: $bg-item;
+    text-shadow: 0 0 1px $bg-item;
+    transition: padding-top 0.5s, color 0.5s ease;
+
+    &::after {
+      background-color: $title-07;
+    }
+
+  }
+
+  &__nav-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    margin-right: 52px;
+
+    &-item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__tools-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tools-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__tools-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    transition: background-color 0.5s, box-shadow 0.5s, text-shadow 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $accent;
+      .icon {
+        stroke: $bg-item;
+      }
+      .header__tools-number {
+        background-color: $bg-item;
+        color: $accent;
+      }
+    }
+
+    &:focus {
+      background-color: $accent-01;
+      box-shadow: 0 0 0 2px $accent-07;
+    }
+
+    &:active {
+      background-color: $bg-plus;
+    }
+
+    .icon {
+      stroke: $title;
+    }
+
+  }
+
+  &__tools-number {
+    font-size: 10px;
+    line-height: 1.4;
+    top: 7px;
+    position: absolute;
+    left: calc(50% + 5px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: $accent;
+    color: $bg-item;
+  }
+  
+}

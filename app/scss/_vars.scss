@@ -1,24 +1,45 @@
-$default: #31352B;
-$title: #363853;
-$accent: #FF6838;
-$bg-item: #fff;
-$bs-item: #ececec;
-$bg-default: #f9faff;
-$border: #c2c2c2;
+$default: rgba(49, 53, 43, 1);
+// #31352B
+$default-05: rgba(49, 53, 43, 0.5);
+
+$title: rgba(54, 56, 83, 1);
+// #363853
+$title-05: rgba(54, 56, 83, 0.5);
+$title-07: rgba(54, 56, 83, 0.7);
+
+$accent: rgba(255, 104, 56, 1);
+// #FF6838
+$accent-07: rgba(255, 104, 56, 0.7);
+$accent-01: rgba(255, 104, 56, 0.1);
 
 
+$bg-default: rgba(249, 250, 255, 1);
+// #f9faff
 
-%quicksand-300 {
-  font-family: 'Rubik-Light';
+$bg-item: rgba(255, 255, 255, 1);
+// #fff
+$bg-item-01: rgba(255, 255, 255, 0.1);
+
+$bs-item: rgba(236, 236, 236, 1);
+// #ececec
+
+$border: rgba(194, 194, 194, 1);
+// #c2c2c2
+
+$bg-plus: rgba(255, 242, 237, 1);
+// #FFF2ED
+
+%font-300 {
+  font-family: 'Rubik', sans-serif;
   font-weight: 300;
 }
 
-%quicksand-400 {
-  font-family: 'Rubik-Regular';
+%font-400 {
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
-%quicksand-500 {
-  font-family: 'Rubik-Medium';
+%font-500 {
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }

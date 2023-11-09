@@ -1,0 +1,132 @@
+.logo {
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  transition: box-shadow 0.5s, opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $accent-07;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+
+  &__link {
+    display: block;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.18px;
+    border-radius: 5px;
+    transition: color 0.5s, box-shadow 0.5s, text-shadow 0.5s, stroke 0.5s ease-in-out;
+
+    &:hover {
+      color: $accent;
+      .icon {
+        stroke: $accent;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-07;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px $default-05;
+    }
+
+    &.current {
+      color: $accent;
+    }
+  }
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: $bg-item;
+  display: block;
+  border-radius: 5px;
+  padding: 7px 14px;
+  background-color: $accent;
+  transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s ease-in-out;
+
+  &:hover {
+    color: $accent;
+    background-color: $bg-item-01;
+    box-shadow: 0 0 0 2px $accent-07;
+
+    .icon {
+      fill: $accent;
+    }
+  }
+
+  &:focus {
+    color: $accent;
+    background-color: $accent-01;
+    box-shadow: 0 0 0 2px $accent-07;
+
+    .icon {
+      fill: $accent;
+    }
+  }
+
+  &:active {
+    color: $accent;
+    background-color: $accent-01;
+
+    .icon {
+      fill: $accent;
+    }
+  }
+
+  &--big {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    padding: 12px 32px;
+  }
+
+  &--sub {
+    @extend %font-500;
+    display: flex;
+    align-items: center;
+    padding: 13px 37px;
+
+    .icon {
+      fill: $bg-item;
+      margin-right: 20px;
+    }
+  }
+
+}
+
+.more {
+  color: $title;
+  border-radius: 5px;
+  margin: auto 0;
+  text-decoration: 0.5px underline $title;
+  transition: box-shadow 0.5s, text-shadow 0.5s, color 0.5s, text-decoration-color 0.5s ease-in-out;
+
+  &:hover {
+    color: $accent;
+    text-decoration-color: transparent;
+  }
+
+  &:focus {
+    text-decoration-color: transparent;
+    box-shadow: 0 0 0 2px $accent-07;
+  }
+
+  &:active {
+    text-decoration-color: transparent;
+    text-shadow: 2px 2px 5px $title-05;
+  }
+}
