@@ -7,7 +7,7 @@ const uglify        = require('gulp-uglify');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del') ;
 const browserSync   = require('browser-sync').create();
-const svgstore      = require('svgStore');
+const svgstore      = require('gulp-svgStore');
 
 
 function browsersync() {
@@ -34,6 +34,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
@@ -59,7 +60,7 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
-function svgStore() {
+function svgSprite() {
   return src('app/images/icon/*.svg')
     .pipe(svgstore())
     .pipe(dest('./app/images'))
@@ -92,4 +93,4 @@ exports.watching      = watching;
 exports.images        = images;
 exports.cleanDist     = cleanDist;
 exports.build         = series(cleanDist, images, build);
-exports.default       = parallel(styles, scripts, browsersync, svgstore, watching);
+exports.default       = parallel(styles, scripts, browsersync, watching, svgSprite);
