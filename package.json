@@ -16,12 +16,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
+    "gulp-svgstore": "^9.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.69.5",
     "jquery": "^3.7.1",
-    "mixitup": "^3.3.1"
-  },
-  "dependencies": {
-    "svgstore": "^3.0.1"
+    "mixitup": "^3.3.1",
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1"
   }
 }

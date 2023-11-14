@@ -1,15 +1,14 @@
 .hero {
 
   &__content {
-    background: no-repeat right bottom / auto;
-    padding-top: 159px;
+    background: no-repeat right bottom / auto 100%;
+    margin-top: 162px;
   }
 
   &__content-inner {
+    height: 51vh;
     max-width: 476px;
     width: 100%;
-    min-height: 660px;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -37,9 +36,6 @@
   &__links {
     display: flex;
     align-items: center;
-  }
-
-  &__links-item {
-    margin-right: 25px;
+    gap: 25px;
   }
 }
