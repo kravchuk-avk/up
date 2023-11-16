@@ -1,12 +1,13 @@
 .footer {
 
-  &__inner {
+  &__container {
     display: flex;
     margin-bottom: 61px;
   }
 
   &__logo {
     margin-bottom: 30px;
+    display: block;
   }
 
   &__sub {
@@ -81,10 +82,28 @@
   }
 
   &__link {
-    font-size: 16px;
-    line-height: 2;
     display: flex;
     align-items: center;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.18px;
+    border-radius: 5px;
+    transition: color 0.5s, box-shadow 0.5s, text-shadow 0.5s, stroke 0.5s ease-in-out;
+
+    &:hover {
+      color: $accent;
+      .icon {
+        stroke: $accent;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-07;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px $default-05;
+    }
   }
 
   .icon {
