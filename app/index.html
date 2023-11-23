@@ -462,34 +462,132 @@
       </section>
 
       <section class="restaurant section">
+        <div class="container">
           <h3 class="title">
             Найкращі ресторани
           </h3>
-
           <ul class="restaurant__list">
             <li class="restaurant__item">
-                <article class="restaurant-card">
-                  <a class="product-card__link" href="#">
-                    <img class="product-card__img" src="images/card/cheese.jpg" width="140" height="140" alt="Чізбургер з листям салату">
-                    <h4 class="product-card__title">
-                      Чізбургер з листям салату
-                    </h4>
-                  </a>
-                  <span class="product-card__price">
-                    160
-                    <span class="currency">
-                      грн.
-                    </span>
+              <article class="restaurant-card">
+                <a class="restaurant-card__link" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/restaurant_1.jpg" width="370" height="300" alt="Блазе піца">
+                  <h3 class="restaurant-card__title">
+                    Blaze Pizza
+                  </h3>
+                </a>
+                <span class="restaurant-card__info">
+                  <span class="restaurant-card__time">
+                    <svg class="icon">
+                      <use class="icon--time" href="images/icon/time.svg#icon-time">
+                      </use>
+                    </svg>
+                    <time class="restaurant-card__time" datetime="11:00">
+                      11:00
+                    </time> 
+                    -
+                    <time class="restaurant-card__time" datetime="22:00">
+                      22:00
+                    </time>
                   </span>
-                  <button class="btn" type="button">
-                    До кошика
-                  </button>
-                </article>
+                  <a class="btn btn--arrow" href="#">
+                    <svg class="icon">
+                      <use class="icon--arrow" href="images/icon/arrow.svg#icon-arrow">
+                      </use>
+                    </svg>
+                  </a>
+                </span>
+              </article>
             </li>
           </ul>
+        </div>
       </section>
 
-      <div class="slider"></div>
+
+      <section class="reviews section">
+        <div class="container">
+          <h3 class="title">
+            Відгуки клієнтів
+          </h3>
+          <div class="slider">
+            <div class="slider__item">
+              <blockquote class="slider__blockquote">
+                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                <cite class="slider__author">
+                  Дарина
+                  <span class="slider__author--kind">
+                    Поціновувачка смачної їжі
+                  </span>
+                </cite>
+              </blockquote>
+            </div>
+            <div class="slider__item">
+              <blockquote class="slider__blockquote">
+                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                <cite class="slider__author">
+                  Дарина
+                  <span class="slider__author--kind">
+                    Поціновувачка смачної їжі
+                  </span>
+                </cite>
+              </blockquote>
+            </div>
+            <div class="slider__item">
+              <blockquote class="slider__blockquote">
+                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                <cite class="slider__author">
+                  Дарина
+                  <span class="slider__author--kind">
+                    Поціновувачка смачної їжі
+                  </span>
+                </cite>
+              </blockquote>
+            </div>
+            <div class="slider__item">
+              <blockquote class="slider__blockquote">
+                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                <cite class="slider__author">
+                  Дарина
+                  <span class="slider__author--kind">
+                    Поціновувачка смачної їжі
+                  </span>
+                </cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <span class="sr-only">Link zum Video mit der Bewertung</span>
+      </section>
+
+      <section class="app section">
+        <div class="container">
+          <h3 class="title">
+            Завантажте мобільний застосунок
+          </h3>
+          <p class="app__text">
+            Ресторани, які ви любите - у ваших руках. Встановлюйте застосунок та замовляйте їжу в зручному місці в зручний час
+          </p>
+          <ul class="">
+            <li class="">
+              <svg class="app__icon">
+                <use class="app__icon--appstore" href="images/icon/appstore.svg#icon-appstore">
+                </use>
+              </svg>
+            </li>
+            <li class="">
+              <svg class="app__icon">
+                <use class="app__icon--playstore" href="images/icon/playstore.svg#icon-playstore">
+                </use>
+              </svg>
+            </li>
+          </ul>
+          <img class="app__img" src="images/app.jpg" alt="Мобільній застосунок">
+        </div>
+      </section>
+
     </main>
     <footer class="footer" id="address">
       <div class="footer__container container">

@@ -104,6 +104,16 @@
     }
   }
 
+  &--arrow {
+      border-radius: 20px;
+      padding: 5px 28px;
+
+  
+
+      .icon {
+      fill: $bg-item;
+      }
+  }
 }
 
 .more {
