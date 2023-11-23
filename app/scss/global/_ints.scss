@@ -107,11 +107,15 @@
   &--arrow {
       border-radius: 20px;
       padding: 5px 28px;
+          display: flex;
+          align-items: center;
 
   
 
       .icon {
       fill: $bg-item;
+          width: 24px;
+          height: 24px;
       }
   }
 }
