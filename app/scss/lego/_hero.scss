@@ -2,11 +2,14 @@
 
   &__content {
     background: no-repeat right bottom / auto 100%;
-    margin-top: 162px;
+    margin-top: 159px;
+    height: 63.8vh;
+    display: flex;
   }
 
   &__content-inner {
-    height: 47vh;
+    background-position: center right;
+
     max-width: 476px;
     width: 100%;
     display: flex;
