@@ -88,16 +88,23 @@
 
 .slick-dots {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 219px;
   width: 100%;
   margin: 0 auto;
   li {
     button{
-
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $border;
+      border-radius: 50%;
     }
     &.slick-active {
-
+      button {
+      background-color: $accent;
+      }
     }
   }
 }
