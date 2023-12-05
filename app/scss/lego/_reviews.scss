@@ -22,7 +22,40 @@
     border-radius: 50%;
   }
 
-  
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // max-width: 219px;
+    // width: 100%;
+    margin: 0 auto;
+  }
+
+  &__prev-arrow {
+    margin-right: 23px;
+        display: flex;
+
+    }
+
+  &__next-arrow {
+    display: flex;
+    }
+
+  &__dots-box {
+    margin-right: 23px;
+    
+    }
+
+    &__icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 34px;
+      border: 3px solid #C2C2C2;
+      background: rgba(255, 255, 255, 0.01);
+      padding: 8px;
+      &--next-arrow {
+      }
+    }
 
 }
 
@@ -90,21 +123,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 219px;
-  width: 100%;
   margin: 0 auto;
+  gap: 15px;
+
   li {
+    display: flex;
+
     button{
       font-size: 0;
       width: 15px;
       height: 15px;
       background-color: $border;
       border-radius: 50%;
+
+      &:hover {
+        background: $bg-plus;
+        box-shadow: 0 0 0 2px $accent-05;
+      }
+
+      &:focus {
+        background: $border;
+        box-shadow: 0 0 0 2px $accent;
+      }
+
+      &:active {
+        background: $accent-05;
+      }
     }
+
     &.slick-active {
       button {
       background-color: $accent;
       }
     }
   }
+
 }
