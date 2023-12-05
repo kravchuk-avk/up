@@ -33,6 +33,10 @@ header.classList.remove('header--active');
 $('.slider').slick({
   dots: true,
   arrows: false,
+  prevArrow: '<button type="button" class="slider__prev-arrow">Previous</button>',
+  nextArrow: '<button type="button" class="slider__next-arrow">Previous</button>',
+  appendDots: '.slider__dots-box',
+
   fade: true,
   autoplay: true,
   autoplaySpead: 2000
