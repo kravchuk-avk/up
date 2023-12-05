@@ -104,18 +104,16 @@
     }
   }
 
-  &--arrow {
-      border-radius: 20px;
-      padding: 5px 28px;
-          display: flex;
-          align-items: center;
+  &--arrowright {
+    border-radius: 20px;
+    padding: 4px 28px;
+    display: flex;
+    align-items: center;
 
-  
-
-      .icon {
+    .icon {
+      width: 24px;
+      height: 24px;
       fill: $bg-item;
-          width: 24px;
-          height: 24px;
       }
   }
 }
