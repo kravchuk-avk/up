@@ -5,8 +5,8 @@
 .slider {
   max-width: 990px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   margin: 0 auto;
   
   &__inner {
@@ -26,35 +26,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // max-width: 219px;
-    // width: 100%;
     margin: 0 auto;
-  }
+    }
 
   &__prev-arrow {
     margin-right: 23px;
-        display: flex;
-
-    }
+    display: flex;
+}
 
   &__next-arrow {
     display: flex;
     }
-
+  
   &__dots-box {
     margin-right: 23px;
-    
-    }
+  }
 
     &__icon {
       width: 34px;
       height: 34px;
       border-radius: 34px;
-      border: 3px solid #C2C2C2;
-      background: rgba(255, 255, 255, 0.01);
+      border: 3px solid $border;
+      background: $bg-item-01;
       padding: 8px;
-      &--next-arrow {
-      }
+      fill: $border;
+      
     }
 
 }

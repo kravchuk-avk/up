@@ -38,7 +38,7 @@ $('.slider').slick({
   appendDots: '.slider__dots-box',
 
   fade: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpead: 2000
 });
 
