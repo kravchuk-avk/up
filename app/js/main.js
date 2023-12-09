@@ -30,16 +30,38 @@ header.classList.remove('header--active');
 }
 }
 
+  $(document).ready(function(){
+    var slider = $('.slider');
+
 $('.slider').slick({
   dots: true,
-  arrows: false,
-  prevArrow: '<button type="button" class="slider__prev-arrow">Previous</button>',
-  nextArrow: '<button type="button" class="slider__next-arrow">Previous</button>',
-  appendDots: '.slider__dots-box',
-
+  arrows: true,
+  appendArrows: $('.slider__nav'),
+  prevArrow: '<button class="slider__btn-prev" type="button"> <svg class="slider__icon"> <use class="slider__icon--prev-arrow" href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
+  appendDots: $('.slider__nav'),
+  nextArrow: '<button class="slider__btn-next" type="button"><svg class="slider__icon"><use class="slider__icon--next-arrow" href="images/icon/nextarrow.svg#icon-nextarrow""></use></svg> <span class="sr-only">Попередній відгук</span></button>',
   fade: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpead: 2000
+});
+
+slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  var $prevBtn = $('.slider__btn-prev');
+  var $nextBtn = $('.slider__btn-next');
+
+  if (nextSlide === 0) {
+    $prevBtn.prop('disabled', true);
+  } else {
+    $prevBtn.prop('disabled', false);
+  }
+
+  if (nextSlide === slick.slideCount - 1) {
+    $nextBtn.prop('disabled', true);
+  } else {
+    $nextBtn.prop('disabled', false);
+  }
+});
+
 });
 
   var mixer = mixitup('.categories__product-list');
