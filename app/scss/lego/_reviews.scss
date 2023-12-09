@@ -5,8 +5,6 @@
 .slider {
   max-width: 990px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   
   &__inner {
@@ -23,41 +21,69 @@
   }
 
   &__nav {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    "prev dots next";
     justify-content: center;
     align-items: center;
-    // max-width: 219px;
-    // width: 100%;
-    margin: 0 auto;
   }
 
-  &__prev-arrow {
-    margin-right: 23px;
-        display: flex;
+  &__btn-prev,
+  &__btn-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 
-    }
-
-  &__next-arrow {
-    display: flex;
-    }
-
-  &__dots-box {
-    margin-right: 23px;
-    
-    }
-
-    &__icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 34px;
-      border: 3px solid #C2C2C2;
-      background: rgba(255, 255, 255, 0.01);
-      padding: 8px;
-      &--next-arrow {
+    &:hover {
+      background: $bg-plus;
+      .slider__icon {
+        fill: $accent-05;
+        border: 3px solid $accent-05;
       }
     }
 
+    &:focus {
+      box-shadow: 0 0 0 2px $accent;
+    }
+
+    &:active {
+      background: $bg-plus;
+      .slider__icon {
+        fill: $accent;
+        border: 3px solid $bg-plus;
+      }
+    }
+
+    &:disabled {
+      .slider__icon {
+        fill: $accent;
+        border: 3px solid $accent;
+      }
+    }
+  }
+
+  &__btn-prev{
+    grid-area: prev;
+
+  }
+
+  &__btn-next {
+    grid-area: next;
+  }
+
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid $border;
+    background: $bg-item-01;
+    padding: 7px;
+    fill: $border;
+  }
+
 }
+
 
 .blockquote {
   max-width: 650px;
@@ -120,40 +146,36 @@
 }
 
 .slick-dots {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+  margin: 0 23px;
   gap: 15px;
+  grid-area: dots;
+  display: flex;
 
   li {
     display: flex;
 
-    button{
-      font-size: 0;
-      width: 15px;
-      height: 15px;
-      background-color: $border;
-      border-radius: 50%;
-
-      &:hover {
-        background: $bg-plus;
-        box-shadow: 0 0 0 2px $accent-05;
+      button{
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $border;
+        border-radius: 50%;
+        &:hover {
+          background: $bg-plus;
+          box-shadow: 0 0 0 2px $accent-05;
+        }
+        &:focus {
+          background: $border;
+          box-shadow: 0 0 0 2px $accent;
+        }
+        &:active {
+          background: $accent-05;
+        }
       }
-
-      &:focus {
-        background: $border;
-        box-shadow: 0 0 0 2px $accent;
-      }
-
-      &:active {
-        background: $accent-05;
-      }
-    }
 
     &.slick-active {
       button {
-      background-color: $accent;
+        background-color: $accent;
       }
     }
   }

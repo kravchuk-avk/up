@@ -1,0 +1,52 @@
+.app {
+
+  &__content {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    height: 32.4vh;
+    display: flex;
+  }
+
+  &__content-inner {
+    background-position: center right;
+    // height: 37.7vh;
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .title {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    // display: flex;
+    // align-items: center;
+
+  }
+
+  &__icon {
+    // width: 120px;
+    // max-width: 100%;
+    // height: 40px;
+    // width: 1000%;
+    // display: inline-block;
+  }
+
+  // &__desc {
+  //   font-size: 24px;
+  // }
+}
