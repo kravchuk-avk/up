@@ -7,7 +7,7 @@
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
-        height: 56.6vh;
+        height: 53vh;
   }
 
   &__content-inner {
@@ -49,10 +49,10 @@
       fill: $accent;
     }
     &--delivery {
-      fill: #00AAFF;
+      fill: $icon1;
     }
     &--restaurant {
-      fill: #FF2222;
+      fill: $icon2;
     }
   }
   
