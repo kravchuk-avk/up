@@ -33,12 +33,14 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 3px solid transparent;
+    transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s, fill 0.5s ease-in-out;
 
     &:hover {
-      background: $bg-plus;
+      background-color: $bg-plus;
       .slider__icon {
         fill: $accent-05;
-        border: 3px solid $accent-05;
+        border-color: $accent-05;
       }
     }
 
@@ -47,17 +49,17 @@
     }
 
     &:active {
-      background: $bg-plus;
+      background-color: $bg-plus;
       .slider__icon {
         fill: $accent;
-        border: 3px solid $bg-plus;
+        border-color: $bg-plus;
       }
     }
 
     &:disabled {
       .slider__icon {
         fill: $accent;
-        border: 3px solid $accent;
+        border-color: $accent;
       }
     }
   }
@@ -106,7 +108,7 @@
     left: 0;
     top: 0;
     display: inline;
-    background-image: url('../images/icon/quoteopen.svg');
+    background-image: url('../images/icon/quote.svg');
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: auto 100%;
@@ -120,7 +122,7 @@
     right: 0;
     bottom: 0;
     display: inline;
-    background-image: url('../images/icon/quoteopen.svg');
+    background-image: url('../images/icon/quote.svg');
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: auto 100%;
@@ -160,16 +162,17 @@
         height: 15px;
         background-color: $border;
         border-radius: 50%;
+        transition: background-color 0.2s, box-shadow 0.2s, ease-in-out;
         &:hover {
-          background: $bg-plus;
+          background-color: $bg-plus;
           box-shadow: 0 0 0 2px $accent-05;
         }
         &:focus {
-          background: $border;
+          background-color: $border;
           box-shadow: 0 0 0 2px $accent;
         }
         &:active {
-          background: $accent-05;
+          background-color: $accent-05;
         }
       }
 

@@ -28,7 +28,7 @@
       color: $accent;
       background-color: $accent-01;
       box-shadow: 0 0 0 2px $accent-07;
-      .icon {
+      .categories__icon {
         fill: $accent;
       }
     }
@@ -43,7 +43,7 @@
       box-shadow: 0 -5px 12px 0 $accent-01 inset;
     }
 
-    .icon {
+    &__icon {
       margin-right: 10px;
       fill: $title;
     }

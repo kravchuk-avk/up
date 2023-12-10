@@ -115,11 +115,6 @@ body {
     box-shadow: 0 3px 15px 0 $accent-05;
   }
 
-  // &__link {
-  //   height: 100%;
-  //   margin-bottom: 10px;
-  // }
-
   &__img {
     border-radius: 10px 10px 0 0;
     margin: 0 auto 15px;
@@ -148,9 +143,9 @@ body {
   }
 
   &__time {
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 1.67;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.67;
     display: flex;
     align-items: center;
   }

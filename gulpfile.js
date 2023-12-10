@@ -61,7 +61,7 @@ function images() {
 }
 
 function svgSprite() {
-  return src('app/images/icon/*.svg')
+  return src('app/images/icon/sprite/*.svg')
     .pipe(svgstore())
     .pipe(dest('./app/images'))
 }
