@@ -92,7 +92,7 @@
 
     &:hover {
       color: $accent;
-      .icon {
+      .address__icon {
         stroke: $accent;
       }
     }
@@ -106,9 +106,11 @@
     }
   }
 
-  .icon {
+  &__icon {
     stroke: $default;
     margin-right: 7px;
+    width: 24px;
+    height: 24px;
   }
 
 
@@ -153,5 +155,6 @@
 
   &__icon {
     fill: $default;
+    height: 20px;
   }
 }
