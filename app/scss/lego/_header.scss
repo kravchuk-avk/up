@@ -72,7 +72,7 @@
 
     &:hover {
       background-color: $accent;
-      .icon {
+      .header__icon {
         stroke: $bg-item;
       }
       .header__tools-number {
@@ -89,11 +89,12 @@
     &:active {
       background-color: $bg-plus;
     }
+  }
 
-    .icon {
-      stroke: $title;
-    }
-
+  &__icon {
+    width: 19px;
+    height: 19px;
+    stroke: $title;
   }
 
   &__tools-number {
