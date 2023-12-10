@@ -42,18 +42,19 @@
       background-color: $bg-item;
       box-shadow: 0 -5px 12px 0 $accent-01 inset;
     }
-
+  }
     &__icon {
+      width: 44px;
+      height: 44px;
       margin-right: 10px;
       fill: $title;
     }
 
-  }
 
   .mixitup-control-active {
     background-color: $accent;
     color: $bg-item;
-    .icon {
+    .categories__icon {
       fill: $bg-item;
     }
   }
