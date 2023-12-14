@@ -37,9 +37,9 @@ $('.slider').slick({
   dots: true,
   arrows: true,
   appendArrows: $('.slider__nav'),
-  prevArrow: '<button class="slider__btn-prev" type="button"> <svg class="slider__icon"> <use class="slider__icon--prev-arrow" href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
+  prevArrow: '<button class="slider__btn-prev" type="button"> <svg class="slider__icon slider__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
   appendDots: $('.slider__nav'),
-  nextArrow: '<button class="slider__btn-next" type="button"><svg class="slider__icon"><use class="slider__icon--next-arrow" href="images/icon/nextarrow.svg#icon-nextarrow""></use></svg> <span class="sr-only">Попередній відгук</span></button>',
+  nextArrow: '<button class="slider__btn-next" type="button"><svg class="slider__icon slider__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow""></use></svg> <span class="sr-only">Попередній відгук</span></button>',
   fade: true,
   autoplay: true,
   autoplaySpead: 2000
