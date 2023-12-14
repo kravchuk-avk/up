@@ -51,7 +51,7 @@
   line-height: 1.3;
   letter-spacing: 0;
   color: $bg-item;
-  display: block;
+  display: inline-block;
   border-radius: 5px;
   padding: 7px 14px;
   background-color: $accent;
@@ -106,25 +106,6 @@
     }
   }
 
-  &--arrowright {
-    border-radius: 20px;
-    padding: 4px 28px;
-    display: flex;
-    align-items: center;
-
-      &:hover {
-        .icon {
-          transform: translateX(50%);
-        }
-      }
-
-    .icon {
-      width: 24px;
-      height: 24px;
-      fill: $bg-item;
-
-      }
-  }
 }
 
 .more {

@@ -44,7 +44,7 @@
           <li class="header__tools-item">
             <button class="header__tools-btn" type="button">
               <svg class="header__icon">
-                <use class="categories__icon--search" href="images/icon/search.svg#icon-search">
+                <use href="images/icon/search.svg#icon-search">
                 </use>
               </svg>
               <span class="sr-only">
@@ -55,7 +55,7 @@
           <li class="header__tools-item">
             <button class="header__tools-btn" type="button">
               <svg class="header__icon">
-                <use class="categories__icon--cart" href="images/icon/cart.svg#icon-cart">
+                <use href="images/icon/cart.svg#icon-cart">
                 </use>
               </svg>
               <span class="sr-only">
@@ -113,7 +113,7 @@
             <li class="categories__filter-item">
               <button class="categories__filter-btn" type="button" data-filter="all">
                 <svg class="categories__icon">
-                  <use class="categories__icon--burger" href="images/icon/ico.svg#icon-burger">
+                  <use href="images/icon/ico.svg#icon-burger">
                   </use>
                 </svg>
                 Бургери
@@ -122,7 +122,7 @@
             <li class="categories__filter-item">
               <button class="categories__filter-btn" type="button" data-filter=".category-a">
                 <svg class="categories__icon">
-                  <use class="categories__icon--pizza" href="images/icon/ico.svg#icon-pizza">
+                  <use href="images/icon/ico.svg#icon-pizza">
                   </use>
                 </svg>
                 Піца
@@ -131,7 +131,7 @@
             <li class="categories__filter-item">
               <button class="categories__filter-btn" type="button" data-filter=".category-c">
                 <svg class="categories__icon">
-                  <use class="categories__icon--sandvich" href="images/icon/ico.svg#icon-sandvich">
+                  <use href="images/icon/ico.svg#icon-sandvich">
                   </use>
                 </svg>
                 Сендвічі
@@ -140,7 +140,7 @@
             <li class="categories__filter-item">
               <button class="categories__filter-btn" type="button" data-filter=".category-d">
                 <svg class="categories__icon">
-                  <use class="categories__icon--asian" href="images/icon/ico.svg#icon-asian">
+                  <use href="images/icon/ico.svg#icon-asian">
                   </use>
                 </svg>
                 Азійська кухня
@@ -149,7 +149,7 @@
             <li class="categories__filter-item">
               <button class="categories__filter-btn" type="button" data-filter=".category-e">
                 <svg class="categories__icon">
-                  <use class="categories__icon--sets" href="images/icon/ico.svg#icon-sets">
+                  <use href="images/icon/ico.svg#icon-sets">
                   </use>
                 </svg>
                 Cети
@@ -355,7 +355,7 @@
         <div class="container">
           <div class="delivery__content" style="background-image: url('images/bg-delivery.png')">
             <div class="delivery__content-inner">
-              <h2 class="title">
+              <h2 class="title delivery__title">
                 Залишайтеся вдома, а ми потурбуємося про їжу
               </h2>
               <div class="delivery__text">
@@ -365,31 +365,31 @@
               </div>
               <ul class="delivery__list">
                 <li class="delivery__item">
-                  <svg class="delivery__icon">
-                    <use class="delivery__icon--timer" href="images/icon/ico.svg#icon-timer">
+                  <svg class="delivery__icon delivery__icon--timer" width="34px" height="34px">
+                    <use href="images/icon/ico.svg#icon-timer">
                     </use>
                   </svg>
-                  <span class="delivery__desc">
+                  <p class="delivery__desc">
                     Швидка доставка за 15 хвилин
-                  </span>
+                  </p>
                 </li>
                 <li class="delivery__item">
-                  <svg class="delivery__icon">
-                    <use class="delivery__icon--delivery" href="images/icon/ico.svg#icon-delivery">
+                  <svg class="delivery__icon delivery__icon--delivery" width="34px" height="34px">
+                    <use href="images/icon/ico.svg#icon-delivery">
                     </use>
                   </svg>
-                  <span class="delivery__desc">
+                  <p class="delivery__desc">
                     Чемні кур’єри
-                  </span>
+                  </p>
                 </li>
                 <li class="delivery__item">
-                  <svg class="delivery__icon">
-                    <use class="delivery__icon--restaurant" href="images/icon/ico.svg#icon-restaurant">
+                  <svg class="delivery__icon delivery__icon--restaurant" width="34px" height="34px">
+                    <use href="images/icon/ico.svg#icon-restaurant">
                     </use>
                   </svg>
-                  <span class="delivery__desc">
+                  <p class="delivery__desc">
                     Більше 500 закладів
-                  </span>
+                  </p>
                 </li>
               </ul>
               <a class="btn btn--big" href="#">
@@ -409,175 +409,187 @@
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_1.jpg" width="370" height="300" alt="Блазе піца">
-                <h3 class="restaurant-card__title">
-                    Blaze Pizza
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="11:00">
-                      11:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="22:00">
-                      22:00
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                      Blaze Pizza
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="11:00">
+                        11:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="22:00">
+                        22:00
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_2.jpg" width="370" height="300" alt="Піца Ранчо">
-                <h3 class="restaurant-card__title">
-                    Pizza Runcho
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="12:00">
-                      12:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="21:00">
-                      21:00
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                      Pizza Runcho
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="12:00">
+                        12:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="21:00">
+                        21:00
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_3.jpg" width="370" height="300" alt="Піца Хат">
-                <h3 class="restaurant-card__title">
-                  Pizza Hut
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="11:00">
-                      11:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="22:00">
-                      22:00
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                    Pizza Hut
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="11:00">
+                        11:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="22:00">
+                        22:00
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_4.jpg" width="370" height="300" alt="Макдоналдс">
-                <h3 class="restaurant-card__title">
-                    McDonald`s
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="06:00">
-                      06:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="23:00">
-                      23:00
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                      McDonald`s
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="06:00">
+                        06:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="23:00">
+                        23:00
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_5.jpg" width="370" height="300" alt="Каефсі">
-                <h3 class="restaurant-card__title">
-                    KFC
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="06:00">
-                      06:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="23:30">
-                      23:30
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                      KFC
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="06:00">
+                        06:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="23:30">
+                        23:30
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
             <li class="restaurant__item">
               <article class="restaurant-card">
                 <img class="restaurant-card__img" src="images/restaurant/restaurant_6.jpg" width="370" height="300" alt="Ста бургерс">
-                <h3 class="restaurant-card__title">
-                  Star Burgers
-                </h3>
-                <span class="restaurant-card__info">
-                  <span class="restaurant-card__time">
-                    <svg class="restaurant-card__icon">
-                      <use class="restaurant-card__icon--time" href="images/icon/ico.svg#icon-time">
-                      </use>
-                    </svg>
-                    <time class="restaurant-card__time" datetime="09:00">
-                      09:00
-                    </time> 
-                    -
-                    <time class="restaurant-card__time" datetime="21:00">
-                      21:00
-                    </time>
+                <div class="restaurant-card__inner">
+                  <h3 class="restaurant-card__title">
+                    Star Burgers
+                  </h3>
+                  <span class="restaurant-card__info">
+                    <span class="restaurant-card__time-inner">
+                      <svg class="restaurant-card__time-icon" width="22" height="22">
+                        <use href="images/icon/ico.svg#icon-time">
+                        </use>
+                      </svg>
+                      <time class="restaurant-card__time" datetime="09:00">
+                        09:00
+                      </time> 
+                      -
+                      <time class="restaurant-card__time" datetime="21:00">
+                        21:00
+                      </time>
+                    </span>
+                    <a class="restaurant-card__link" href="#">
+                      <svg class="restaurant-card__icon-arrowright" width="24" height="24">
+                        <use href="images/icon/ico.svg#icon-arrowright">
+                        </use>
+                      </svg>
+                    </a>
                   </span>
-                  <a class="btn btn--arrowright" href="#">
-                    <svg class="icon">
-                      <use class="icon--arrowright" href="images/icon/ico.svg#icon-arrowright">
-                      </use>
-                    </svg>
-                  </a>
-                </span>
+                </div>
               </article>
             </li>
           </ul>
@@ -592,14 +604,17 @@
           <div class="slider">
             <div class="slider__item">
               <div class="slider__inner">
-                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                
+                <img class="slider__img" src="images/daryna.jpg" width="300" height="300" alt="Дарина">
                 <blockquote class="blockquote">
-                  <p class="blockquote__text">
-                  SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
-                  </p>
+                  <div class="blockquote__text">
+                    <p>
+                      SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                    </p>
+                  </div>
                   <cite class="blockquote__author">
                   Дарина
-                    <span class="blockquote__author--kind">
+                    <span class="blockquote__author-kind">
                       Поціновувачка смачної їжі
                     </span>
                   </cite>
@@ -608,14 +623,16 @@
             </div>
             <div class="slider__item">
               <div class="slider__inner">
-                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                <img class="slider__img" src="images/daryna.jpg" width="300" height="300" alt="Дарина">
                 <blockquote class="blockquote">
-                  <p class="blockquote__text">
-                  SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
-                  </p>
+                  <div class="blockquote__text">
+                    <p>
+                      SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                    </p>
+                  </div>
                   <cite class="blockquote__author">
                   Дарина
-                    <span class="blockquote__author--kind">
+                    <span class="blockquote__author-kind">
                       Поціновувачка смачної їжі
                     </span>
                   </cite>
@@ -624,14 +641,16 @@
             </div>
             <div class="slider__item">
               <div class="slider__inner">
-                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                <img class="slider__img" src="images/daryna.jpg" width="300" height="300" alt="Дарина">
                 <blockquote class="blockquote">
-                  <p class="blockquote__text">
-                  SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
-                  </p>
+                  <div class="blockquote__text">
+                    <p>
+                      SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                    </p>
+                  </div>
                   <cite class="blockquote__author">
                   Дарина
-                    <span class="blockquote__author--kind">
+                    <span class="blockquote__author-kind">
                       Поціновувачка смачної їжі
                     </span>
                   </cite>
@@ -640,14 +659,16 @@
             </div>
             <div class="slider__item">
               <div class="slider__inner">
-                <img class="slider__img" src="images/daryna.jpg" alt="Дарина">
+                <img class="slider__img" src="images/daryna.jpg" width="300" height="300" alt="Дарина">
                 <blockquote class="blockquote">
-                  <p class="blockquote__text">
-                  SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
-                  </p>
+                  <div class="blockquote__text">
+                    <p>
+                      SimpleFood - одна з найкращих служб доставки продуктів з ресторанів у місті. Дуже зручний сайт та застосунок. Їхні доставники дуже ввічливі та пунктуальні. Компанія часто проводить акції та дарує знижки на доставку - однозначно рекомендую!
+                    </p>
+                  </div>
                   <cite class="blockquote__author">
                   Дарина
-                    <span class="blockquote__author--kind">
+                    <span class="blockquote__author-kind">
                       Поціновувачка смачної їжі
                     </span>
                   </cite>

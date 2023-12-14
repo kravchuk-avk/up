@@ -30,17 +30,21 @@
 
   &__btn-prev,
   &__btn-next {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    border: 3px solid transparent;
+    border: 3px solid $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-item-01;
     transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s, fill 0.5s ease-in-out;
 
     &:hover {
       background-color: $bg-plus;
+      border-color: $accent-05;
       .slider__icon {
         fill: $accent-05;
-        border-color: $accent-05;
       }
     }
 
@@ -50,16 +54,16 @@
 
     &:active {
       background-color: $bg-plus;
+      border-color: $bg-plus;
       .slider__icon {
         fill: $accent;
-        border-color: $bg-plus;
       }
     }
 
     &:disabled {
+      border-color: $accent;
       .slider__icon {
         fill: $accent;
-        border-color: $accent;
       }
     }
   }
@@ -75,12 +79,6 @@
 
 
   &__icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 3px solid $border;
-    background: $bg-item-01;
-    padding: 7px;
     fill: $border;
   }
 
@@ -136,8 +134,9 @@
   display: flex;
   flex-direction: column;
   padding: 0 40px;
-  
-  &--kind {
+  }
+
+  &__author-kind {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3;
@@ -145,7 +144,7 @@
     margin-top: 15px;
   }
 }
-}
+
 
 .slick-dots {
   margin: 0 23px;
