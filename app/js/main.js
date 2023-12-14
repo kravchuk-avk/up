@@ -30,24 +30,26 @@ header.classList.remove('header--active');
 }
 }
 
-  $(document).ready(function(){
-    var slider = $('.slider');
 
-$('.slider').slick({
+
+  $(document).ready(function(){
+    var slider = $('.reviews__box');
+
+$('.reviews__box').slick({
   dots: true,
   arrows: true,
-  appendArrows: $('.slider__nav'),
-  prevArrow: '<button class="slider__btn-prev" type="button"> <svg class="slider__icon slider__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
-  appendDots: $('.slider__nav'),
-  nextArrow: '<button class="slider__btn-next" type="button"><svg class="slider__icon slider__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow""></use></svg> <span class="sr-only">Попередній відгук</span></button>',
+  appendArrows: $('.reviews__nav'),
+  prevArrow: '<button class="reviews__btn-prev" type="button"> <svg class="reviews__icon reviews__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
+  appendDots: $('.reviews__nav'),
+  nextArrow: '<button class="reviews__btn-next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
   autoplay: true,
-  autoplaySpead: 2000
+  autoplaySpeed: 2000
 });
 
 slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  var $prevBtn = $('.slider__btn-prev');
-  var $nextBtn = $('.slider__btn-next');
+  var $prevBtn = $('.reviews__btn-prev');
+  var $nextBtn = $('.reviews__btn-next');
 
   if (nextSlide === 0) {
     $prevBtn.prop('disabled', true);

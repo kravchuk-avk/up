@@ -1,22 +1,21 @@
 .reviews {
   text-align: center;
-}
 
-.slider {
-  max-width: 990px;
-  width: 100%;
-  margin: 0 auto;
-  
+  &__box {
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 30px;
-    }
+  }
 
   &__img {
-    max-width: 300px;
-    width: 100%;
     border-radius: 50%;
   }
 
@@ -43,7 +42,7 @@
     &:hover {
       background-color: $bg-plus;
       border-color: $accent-05;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent-05;
       }
     }
@@ -55,14 +54,14 @@
     &:active {
       background-color: $bg-plus;
       border-color: $bg-plus;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent;
       }
     }
 
     &:disabled {
       border-color: $accent;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent;
       }
     }
@@ -70,7 +69,6 @@
 
   &__btn-prev{
     grid-area: prev;
-
   }
 
   &__btn-next {
