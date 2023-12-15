@@ -72,7 +72,6 @@
 }
 
 .address {
-
   &__list {
     margin-bottom: 15px;
   }
@@ -109,8 +108,6 @@
   &__icon {
     stroke: $default;
     margin-right: 7px;
-    width: 24px;
-    height: 24px;
   }
 
 
@@ -118,10 +115,8 @@
 
 .socials {
   display: flex;
-
-  &__inner:not(:last-child) {
-    margin-right: 13px;
-  }
+  flex-wrap: wrap;
+  gap: 13px;
 
   &__link {
     display: flex;
@@ -155,6 +150,5 @@
 
   &__icon {
     fill: $default;
-    height: 20px;
   }
 }
