@@ -1,15 +1,16 @@
 .hero {
 
   &__content {
-    background: no-repeat right bottom / auto 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
     margin-top: 159px;
-    height: 59.8vh;
+    height: 52.5vh;
     display: flex;
   }
 
   &__content-inner {
     background-position: center right;
-
     max-width: 476px;
     width: 100%;
     display: flex;
@@ -33,12 +34,16 @@
 
   &__text {
     padding-right: 26px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    & p:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   &__links {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 25px;
   }
 }

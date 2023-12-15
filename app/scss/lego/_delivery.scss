@@ -2,19 +2,19 @@
 
   &__content {
     background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: auto 100%;
+    background-position: center left;
+    background-size: auto;
     max-width: 1030px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
-        height: 53vh;
   }
 
   &__content-inner {
     max-width: 470px;
     width: 100%;
+    padding: 58px 0;
   }
 
   &__title {

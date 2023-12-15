@@ -1,22 +1,21 @@
 .reviews {
   text-align: center;
-}
 
-.slider {
-  max-width: 990px;
-  width: 100%;
-  margin: 0 auto;
-  
+  &__box {
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 30px;
-    }
+  }
 
   &__img {
-    max-width: 300px;
-    width: 100%;
     border-radius: 50%;
   }
 
@@ -43,7 +42,7 @@
     &:hover {
       background-color: $bg-plus;
       border-color: $accent-05;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent-05;
       }
     }
@@ -55,14 +54,14 @@
     &:active {
       background-color: $bg-plus;
       border-color: $bg-plus;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent;
       }
     }
 
     &:disabled {
       border-color: $accent;
-      .slider__icon {
+      .reviews__icon {
         fill: $accent;
       }
     }
@@ -70,7 +69,6 @@
 
   &__btn-prev{
     grid-area: prev;
-
   }
 
   &__btn-next {
@@ -98,43 +96,47 @@
     padding: 0 40px;
     margin-bottom: 30px;
 
-  &::before {
-    content: '';
-    width: 24px;
-    height: 19px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: inline;
-    background-image: url('../images/icon/quote.svg');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: auto 100%;
+    &::before {
+      content: '';
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline;
+      background-image: url('../images/icon/quote.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: auto 100%;
     }
 
-  &::after{
-    content: '';
-    width: 24px;
-    height: 19px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: inline;
-    background-image: url('../images/icon/quote.svg');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: auto 100%;
-    transform: rotateY(180deg);
+    &::after{
+      content: '';
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: inline;
+      background-image: url('../images/icon/quote.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: auto 100%;
+      transform: rotateY(180deg);
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 
-&__author {
-  font-weight: 500;
-  color: $accent;
-  display: flex;
-  flex-direction: column;
-  padding: 0 40px;
-  }
+  &__author {
+    font-weight: 500;
+    color: $accent;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    }
 
   &__author-kind {
     font-size: 14px;

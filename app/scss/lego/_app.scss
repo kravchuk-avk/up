@@ -1,16 +1,13 @@
 .app {
 
   &__content {
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: auto 100%;
-    height: 34vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__content-inner {
     background-position: center right;
-    // height: 37.7vh;
     max-width: 470px;
     width: 100%;
     display: flex;
@@ -18,7 +15,7 @@
     align-content: center;
   }
 
-  .title {
+  &__title {
     margin-bottom: 45px;
   }
 
@@ -33,10 +30,16 @@
   }
 
   &__link {
-    transition: opacity 0.5s ease-in-out;
+    display: inline-flex;
+    transition: opacity 0.5s, box-shadow 0.5, outline ease-in-out;
     &:hover {
-      opacity: 0.5;
+      box-shadow: 0 0 0 2px $border;
+    }
+    &:focus {
+      outline: $accent solid 2px;
+    }
+    &:active {
+      opacity: 0.3;
     }
   }
-
 }

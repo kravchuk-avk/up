@@ -4,13 +4,9 @@
   &__filter-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 45px;
-  }
-
-  &__filter-item {
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+    gap: 20px;
   }
 
   &__filter-btn {
@@ -44,8 +40,6 @@
     }
   }
     &__icon {
-      width: 44px;
-      height: 44px;
       margin-right: 10px;
       fill: $title;
     }

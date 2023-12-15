@@ -84,3 +84,8 @@ input {
   border: none;
   resize: none;
 }
+
+
+svg {
+  flex-shrink: 0;
+}
