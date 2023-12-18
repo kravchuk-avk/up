@@ -1,12 +1,12 @@
 $(function(){
 
 
-// $('.header__btn, .header__link').on('click', function (event) {
-//   $('.header__btn,.header__line,.header__list, .header__link').toggleClass('header__btn--active');
+$('.header__btn, .header__link').on('click', function (event) {
+  $('.header__btn,.header__line,.header__list, .header__link').toggleClass('header__btn--active');
 
-//   $('body').toggleClass('body__lock');
+  $('body').toggleClass('body__lock');
 
-// });
+});
 
 $(".logo, .header__menu-link").on("click", function (event) {
   event.preventDefault();
