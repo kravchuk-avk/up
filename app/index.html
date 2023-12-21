@@ -17,12 +17,13 @@
 <body id="body">
   <div class="wrapper">
     <header class="header">
-      <div class="header__container container">
+      <div class="container header__container">
         <nav class="header__nav">
           <a class="logo" href="#body">
             <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип">
           </a>
-          <ul class="menu header__menu">
+
+          <ul class="header__menu menu">
             <li class="menu__item">
               <span class="menu__link current">
                 Головна
@@ -44,7 +45,7 @@
           <li class="header__tools-item">
             <button class="header__tools-btn" type="button">
               <svg class="header__icon" width="19" height="19">
-                <use href="images/icon/search.svg#icon-search">
+                <use href="images/icon/ico.svg#icon-search">
                 </use>
               </svg>
               <span class="sr-only">
@@ -55,7 +56,7 @@
           <li class="header__tools-item">
             <button class="header__tools-btn" type="button">
               <svg class="header__icon" width="19" height="19">
-                <use href="images/icon/cart.svg#icon-cart">
+                <use href="images/icon/ico.svg#icon-cart">
                 </use>
               </svg>
               <span class="sr-only">
@@ -67,6 +68,11 @@
             </button>
           </li>
         </ul>
+                  <button class="header__nav-btn" type="button">
+            <span class="header__nav-line">
+            </span>
+            <span class="sr-only">Кнопка меню</span>
+          </button>
       </div>
     </header>
     <main class="main">
@@ -681,8 +687,8 @@
               </div>
             </div>
           </div>
-          <div class="reviews__nav">
-          </div>
+          <!-- <div class="reviews__nav">
+          </div> -->
         </div>
       </section>
 
@@ -817,7 +823,7 @@
             <li class="address__item">
               <a class="address__link" href="geo:#">
                 <svg class="address__icon" width="24" height="24">
-                  <use href="images/icon/location.svg#icon-location">
+                  <use href="images/icon/ico.svg#icon-location">
                   </use>
                 </svg>
                 вул. Т.Г.Шевченка, 1
@@ -826,7 +832,7 @@
             <li class="address__item">
               <a class="address__link" href="tel:+380501112233">
                 <svg class="address__icon" width="24" height="24">
-                  <use href="images/icon/call.svg#icon-call">
+                  <use href="images/icon/ico.svg#icon-call">
                   </use>
                 </svg>
                 380501112233
@@ -835,7 +841,7 @@
             <li class="address__item">
               <a class="address__link" href="mailto:support@sfood.com">
                 <svg class="address__icon" width="24" height="24">
-                  <use href="images/icon/message.svg#icon-message">
+                  <use href="images/icon/ico.svg#icon-message">
                   </use>
                 </svg>
                 support@sfood.com

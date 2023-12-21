@@ -2,9 +2,11 @@
   text-align: center;
 
   &__box {
-    max-width: 990px;
-    width: 100%;
-    margin: 0 auto;
+    padding: 0 90px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   &__inner {
@@ -19,16 +21,15 @@
     border-radius: 50%;
   }
 
-  &__nav {
-    display: grid;
-    grid-template-areas: 
-    "prev dots next";
-    justify-content: center;
-    align-items: center;
-  }
+  // &__nav {
+  //   display: grid;
+  //   grid-template-areas: 
+  //   "prev dots next";
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
-  &__btn-prev,
-  &__btn-next {
+  &__btn {
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -67,21 +68,21 @@
     }
   }
 
-  &__btn-prev{
-    grid-area: prev;
+  &__btn--prev{
+    // grid-area: prev;
+    order: 2;
   }
 
-  &__btn-next {
-    grid-area: next;
+  &__btn--next {
+    // grid-area: next;
+    order: 4;
   }
-
 
   &__icon {
     fill: $border;
   }
 
 }
-
 
 .blockquote {
   max-width: 650px;
@@ -147,12 +148,12 @@
   }
 }
 
-
 .slick-dots {
   margin: 0 23px;
   gap: 15px;
   grid-area: dots;
   display: flex;
+  order: 3;
 
   li {
     display: flex;

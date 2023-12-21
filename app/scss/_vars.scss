@@ -77,7 +77,8 @@ $xl: 1200px;
 }
 
 // Медиа-запросы (большой миксин) 
-$breakpoints: ("phone": 560px,
+$breakpoints: (
+  "phone": 560px,
   "tablet": 768px,
   "tablet-2": 992px,
   "desktop": 1230px);
