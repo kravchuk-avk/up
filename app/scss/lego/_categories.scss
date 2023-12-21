@@ -38,20 +38,21 @@
       background-color: $bg-item;
       box-shadow: 0 -5px 12px 0 $accent-01 inset;
     }
+    
+    &.mixitup-control-active {
+      background-color: $accent;
+      color: $bg-item;
+
+      .categories__icon {
+        fill: $bg-item;
+      }
+    }
   }
-    &__icon {
+    
+  &__icon {
       margin-right: 10px;
       fill: $title;
     }
-
-
-  .mixitup-control-active {
-    background-color: $accent;
-    color: $bg-item;
-    .categories__icon {
-      fill: $bg-item;
-    }
-  }
 
   &__product-list {
     display: grid;

@@ -1,12 +1,12 @@
 $(function(){
 
 
-// $('.header__btn, .header__link').on('click', function (event) {
-//   $('.header__btn,.header__line,.header__list, .header__link').toggleClass('header__btn--active');
+$('.header__nav-btn, .menu__link').on('click', function (event) {
+  $('.header__nav-btn,.header__nav-line,.header__menu, .menu__link').toggleClass('header__nav-btn--active');
 
-//   $('body').toggleClass('body__lock');
+  $('body').toggleClass('body__lock');
 
-// });
+});
 
 $(".logo, .header__menu-link").on("click", function (event) {
   event.preventDefault();
@@ -38,18 +38,18 @@ header.classList.remove('header--active');
 $('.reviews__box').slick({
   dots: true,
   arrows: true,
-  appendArrows: $('.reviews__nav'),
-  prevArrow: '<button class="reviews__btn-prev" type="button"> <svg class="reviews__icon reviews__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
-  appendDots: $('.reviews__nav'),
-  nextArrow: '<button class="reviews__btn-next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
+  // appendArrows: $('.reviews__nav'),
+  prevArrow: '<button class="reviews__btn reviews__btn--prev" type="button"> <svg class="reviews__icon reviews__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
+  // appendDots: $('.reviews__nav'),
+  nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
   autoplay: true,
   autoplaySpeed: 2000
 });
 
 slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  var $prevBtn = $('.reviews__btn-prev');
-  var $nextBtn = $('.reviews__btn-next');
+  var $prevBtn = $('.reviews__btn--prev');
+  var $nextBtn = $('.reviews__btn--next');
 
   if (nextSlide === 0) {
     $prevBtn.prop('disabled', true);

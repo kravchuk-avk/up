@@ -2,19 +2,18 @@
 
   &__content {
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: 70px center;
+    background-origin: border-box;
     background-size: auto;
-    max-width: 1030px;
-    width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin: 0 auto;
+    padding-right: 70px;
   }
 
   &__content-inner {
-    max-width: 470px;
-    width: 100%;
+    width: 470px;
     padding: 58px 0;
+    aspect-ratio: auto 1 / 1;
   }
 
   &__title {
@@ -23,7 +22,7 @@
 
   &__text {
     margin-bottom: 30px;
-    & p:not(:last-child) {
+    p:not(:last-child) {
       margin-bottom: 15px;
     }
   }
@@ -56,5 +55,4 @@
   &__desc {
     font-size: 24px;
   }
-
 }

@@ -28,6 +28,7 @@
     transition: padding-top 0.5s, color 0.5s ease;
 
     &::after {
+      backdrop-filter: blur(6px);
       background-color: $title-07;
     }
 
@@ -92,8 +93,6 @@
   }
 
   &__icon {
-    width: 19px;
-    height: 19px;
     stroke: $title;
   }
 
