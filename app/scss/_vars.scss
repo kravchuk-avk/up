@@ -54,38 +54,38 @@ $icon2: rgba(255, 34, 34, 1);
 // }
 
 /*SCSS-змінні*/
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-/*Приклад використання*/
-@media (max-width: $xl) {
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// /*Приклад використання*/
+// @media (max-width: $xl) {
   
-}
+// }
 
-// При использовании ::before и ::after, мы зачастую нуждаемся в этих строках кода:
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
-}
-// Использование миксина без аргументов
-.class::after {
-  @include pseudo;
-  width: 30px;
-  height: 30px;
-}
+// // При использовании ::before и ::after, мы зачастую нуждаемся в этих строках кода:
+// @mixin pseudo($display: block, $pos: absolute, $content: '') {
+//   content: $content;
+//   display: $display;
+//   position: $pos;
+// }
+// // Использование миксина без аргументов
+// .class::after {
+//   @include pseudo;
+//   width: 30px;
+//   height: 30px;
+// }
 
-// Медиа-запросы (большой миксин) 
-$breakpoints: (
-  "phone": 560px,
+// Задаем точки разрыва
+$breakpoints: ("phone": 560px,
   "tablet": 768px,
   "tablet-2": 992px,
   "desktop": 1230px);
 
+// Миксин для создания медиа-запросов
 @mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
+  @if map-has-key($breakpoints, $width) {
+    $width: map-get($breakpoints, $width);
 
     @if $type==max {
       $width: $width - 1px;
@@ -96,14 +96,9 @@ $breakpoints: (
     }
   }
 }
-// Использование миксина 
-.header {
-  padding: 20px;
 
-  @include mq('tablet') {
-    padding: 15px;
-  }
-}
+
+
 
 // Обрезание текста 
 @mixin line-clamp($lines: 1) {

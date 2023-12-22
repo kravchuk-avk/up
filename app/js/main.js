@@ -39,9 +39,9 @@ $('.reviews__box').slick({
   dots: true,
   arrows: true,
   // appendArrows: $('.reviews__nav'),
-  prevArrow: '<button class="reviews__btn reviews__btn--prev" type="button"> <svg class="reviews__icon reviews__icon--prev-arrow" width="19" height="11"> <use href="images/icon/prevarrow.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
+  prevArrow: '<button class="reviews__btn reviews__btn--prev" type="button"> <svg class="reviews__icon reviews__icon--prev-arrow" width="19" height="11"> <use href="images/icon/ico.svg#icon-prevarrow"> </use> </svg> <span class="sr-only">Попередній відгук</span> </button>',
   // appendDots: $('.reviews__nav'),
-  nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/nextarrow.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
+  nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/ico.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
   autoplay: true,
   autoplaySpeed: 2000

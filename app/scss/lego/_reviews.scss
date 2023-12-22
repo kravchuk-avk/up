@@ -66,22 +66,21 @@
         fill: $accent;
       }
     }
-  }
 
-  &__btn--prev{
-    // grid-area: prev;
-    order: 2;
-  }
+    &--prev{
+      // grid-area: prev;
+      order: 2;
+    }
 
-  &__btn--next {
-    // grid-area: next;
-    order: 4;
+    &--next {
+      // grid-area: next;
+      order: 4;
+    }
   }
 
   &__icon {
     fill: $border;
   }
-
 }
 
 .blockquote {
