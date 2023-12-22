@@ -8,6 +8,11 @@
   z-index: 1;
   transition: padding 1.5s ease;
 
+    @include mq('tablet') {
+      padding: 45px;
+    }
+    
+
   &::after {
     content: "";
     position: absolute;
@@ -107,6 +112,7 @@
     border-radius: 50%;
     background-color: $accent;
     color: $bg-item;
+    display: inline-table;
   }
   
 }

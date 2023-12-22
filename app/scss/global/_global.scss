@@ -16,9 +16,18 @@ body {
   font-style: normal;
   line-height: 1.5;
   color: $default;
-  background-color: $bg-default;
   position: relative;
-}
+
+  // background-color: lightgray;
+
+  // @include mq("tablet", max) {
+  //   background-color: lightblue;
+  // }
+
+  // @include mq("desktop", max) {
+  //   background-color: lightgreen;
+  // }
+  }
 
 .main {
   flex-grow: 1;
