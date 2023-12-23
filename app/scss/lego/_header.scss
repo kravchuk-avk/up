@@ -8,11 +8,6 @@
   z-index: 1;
   transition: padding 1.5s ease;
 
-    @include mq('tablet') {
-      padding: 45px;
-    }
-    
-
   &::after {
     content: "";
     position: absolute;
@@ -36,7 +31,6 @@
       backdrop-filter: blur(6px);
       background-color: $title-07;
     }
-
   }
 
   &__container {
@@ -80,6 +74,7 @@
       background-color: $accent;
       .header__icon {
         stroke: $bg-item;
+
       }
       .header__tools-number {
         background-color: $bg-item;
@@ -114,5 +109,4 @@
     color: $bg-item;
     display: inline-table;
   }
-  
 }
