@@ -21,9 +21,12 @@
     transition: background-color 0.5s ease-in-out;
   }
 
+  @include mq("tablet", max) {
+    padding: 14px 0;
+  }
+
   &--active {
     padding: 20px 12px 20px 5px;
-    color: $bg-item;
     text-shadow: 0 0 1px $bg-item;
     transition: padding-top 0.5s, color 0.5s ease;
 
@@ -43,21 +46,42 @@
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
+    margin-right: 52px;
+
+    @include mq("tablet", max) {
+      margin-right: 0px;
+    }
+  }
+
+  &__logo {
+    @include mq("tablet", max) {
+      width: 115px;
+      height: 23px;
+    }
   }
 
   &__menu {
     display: flex;
-    margin-right: 52px;
     gap: 40px;
+
+    @include mq("tablet", max) {
+      display: none;
+    }
   }
 
   &__tools-list {
     display: flex;
     align-items: center;
+
+    @include mq("tablet", max) {
+      margin-right: 10px;
+    }
   }
 
-  &__tools-item:not(:last-child) {
-    margin-right: 10px;
+  &__tools-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &__tools-btn {
@@ -72,7 +96,8 @@
 
     &:hover {
       background-color: $accent;
-      .header__icon {
+
+      .header__tools-icon {
         stroke: $bg-item;
       }
 
@@ -92,7 +117,7 @@
     }
   }
 
-  &__icon {
+  &__tools-icon {
     stroke: $title;
   }
 
@@ -108,5 +133,43 @@
     background-color: $accent;
     color: $bg-item;
     display: inline-table;
+  }
+
+  &__mob {
+    position: absolute;
+    left: 0;
+    right: 75px;
+    top: 0;
+    height: 100vh;
+    background-color: $bg-item;
+    overflow: auto;
+    transform: translate(-50%, -100%);
+    transition: all 0.5s;
+
+    &.burger--active {
+
+      @include mq("tablet", max) {
+        display: block;
+        transform: translate(0);
+        position: fixed;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__mob-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+  }
+
+  &__address {
+    display: none;
+    padding: 10px 0;
+
+    @include mq("tablet", max) {
+      display: block;
+    }
   }
 }

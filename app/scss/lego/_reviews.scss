@@ -7,6 +7,13 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+
+    @include mq("tablet", max) {
+      padding: 0 0px;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
   }
 
   &__inner {
@@ -15,19 +22,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include mq("desktop", max) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__img {
     border-radius: 50%;
-  }
+    position: relative;
 
-  // &__nav {
-  //   display: grid;
-  //   grid-template-areas: 
-  //   "prev dots next";
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+    @include mq("desktop", max) {
+      margin-bottom: 29px;
+    }
+
+    @include mq("tablet", max) {
+      width: 100px;
+      height: 100px;
+    }
+  }
 
   &__btn {
     width: 34px;
@@ -43,6 +57,7 @@
     &:hover {
       background-color: $bg-plus;
       border-color: $accent-05;
+
       .reviews__icon {
         fill: $accent-05;
       }
@@ -55,6 +70,7 @@
     &:active {
       background-color: $bg-plus;
       border-color: $bg-plus;
+
       .reviews__icon {
         fill: $accent;
       }
@@ -62,24 +78,37 @@
 
     &:disabled {
       border-color: $accent;
+
       .reviews__icon {
         fill: $accent;
       }
     }
 
-    &--prev{
-      // grid-area: prev;
+    &--prev {
       order: 2;
+
+      @include mq("tablet", max) {
+        order: -1;
+        // position: absolute;
+      }
     }
 
     &--next {
-      // grid-area: next;
       order: 4;
+
+      @include mq("tablet", max) {
+        order: 3;
+        // position: absolute;
+      }
     }
   }
 
   &__icon {
     fill: $border;
+      @include mq("tablet", max) {
+        order: 2;
+      }
+
   }
 }
 
@@ -110,7 +139,7 @@
       background-size: auto 100%;
     }
 
-    &::after{
+    &::after {
       content: '';
       width: 24px;
       height: 19px;
@@ -128,6 +157,10 @@
     & p:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    @include mq("tablet", max) {
+      font-size: 14px;
+    }
   }
 
   &__author {
@@ -136,7 +169,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 40px;
-    }
+  }
 
   &__author-kind {
     font-size: 14px;
@@ -153,29 +186,33 @@
   grid-area: dots;
   display: flex;
   order: 3;
+  justify-content: center;
 
   li {
     display: flex;
 
-      button{
-        font-size: 0;
-        width: 15px;
-        height: 15px;
-        background-color: $border;
-        border-radius: 50%;
-        transition: background-color 0.2s, box-shadow 0.2s, ease-in-out;
-        &:hover {
-          background-color: $bg-plus;
-          box-shadow: 0 0 0 2px $accent-05;
-        }
-        &:focus {
-          background-color: $border;
-          box-shadow: 0 0 0 2px $accent;
-        }
-        &:active {
-          background-color: $accent-05;
-        }
+    button {
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $border;
+      border-radius: 50%;
+      transition: background-color 0.2s, box-shadow 0.2s, ease-in-out;
+
+      &:hover {
+        background-color: $bg-plus;
+        box-shadow: 0 0 0 2px $accent-05;
       }
+
+      &:focus {
+        background-color: $border;
+        box-shadow: 0 0 0 2px $accent;
+      }
+
+      &:active {
+        background-color: $accent-05;
+      }
+    }
 
     &.slick-active {
       button {
@@ -184,4 +221,9 @@
     }
   }
 
+}
+@include mq("tablet", max) {
+  .reviews__box .slick-dots {
+    display: none !important;
+  }
 }

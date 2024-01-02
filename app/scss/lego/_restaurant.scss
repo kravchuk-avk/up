@@ -7,5 +7,23 @@
     align-content: center;
     grid-template-columns: repeat(auto-fill, 370px);
     gap: 30px;
+
+    @include mq("desktop", max) {
+      grid-template-columns: repeat(auto-fill, 345px);
+      gap: 15px;
+    }
+  }
+
+  & .slick-initialized {
+    display: block;
+    max-width: 345px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__item {
+    @include mq("tablet", max) {
+      margin-bottom: 30px;
+    }
   }
 }
