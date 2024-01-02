@@ -1,6 +1,7 @@
 .delivery {
 
   &__content {
+    position: relative;
     background-repeat: no-repeat;
     background-position: 70px center;
     background-origin: border-box;
@@ -8,51 +9,134 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 70px;
+    height: 100%;
+
+    @include mq("desktop", max) {
+      padding-right: 0;
+      background-position: left center;
+    }
+
+    @include mq("tablet-2", max) {
+      background-position: center;
+      justify-content: center;
+      background-size: contain;
+      z-index: 0;
+    }
+
+    @include mq("tablet", max) {
+      // max-width: 470px;
+      // background-size: 100% auto;
+      margin: 0 auto;
+      // aspect-ratio: auto 1 / 1;
+    }
+
+    @include mq("phone", max) {
+      background-size: 100% 100%;
+      max-width: 345px;
+      // margin: 0 auto;
+      // aspect-ratio: auto 1 / 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-default-085;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
   }
 
   &__content-inner {
-    width: 470px;
+    max-width: 470px;
+    width: 100%;
     padding: 58px 0;
     aspect-ratio: auto 1 / 1;
+
+    @include mq("tablet-2", max) {
+      padding: 50px;
+    }
+
+    @include mq("tablet", max) {
+      max-width: 345px;
+      // aspect-ratio: 1 / 1;
+      padding: 31px 0;
+    }
   }
 
   &__title {
     margin-bottom: 30px;
+
+    @include mq("desktop", max) {
+      font-size: 24px;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
+
     p:not(:last-child) {
       margin-bottom: 15px;
+    }
+
+    @include mq("desktop", max) {
+      font-size: 18px;
+      margin-bottom: 20px;
     }
   }
 
   &__list {
     margin-bottom: 30px;
+
+    @include mq("desktop", max) {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
+
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include mq("desktop", max) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include mq("desktop", max) {
+      font-size: 15px;
     }
   }
 
   &__icon {
     margin-right: 30px;
+
     &--timer {
       fill: $accent;
     }
+
     &--delivery {
       fill: $icon1;
     }
+
     &--restaurant {
       fill: $icon2;
     }
+
+    @include mq("desktop", max) {
+      margin-right: 10px;
+    }
   }
-  
+
   &__desc {
     font-size: 24px;
+
+    @include mq("desktop", max) {
+      font-size: 18px;
+    }
   }
 }

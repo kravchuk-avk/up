@@ -1,5 +1,10 @@
 .logo {
+  position: relative;
+  display: block;
+  max-width: 200px;
+  width: 100%;
   border-radius: 5px;
+  z-index: 2;
   transition: box-shadow 0.5s, opacity 0.5s ease-in-out;
 
   &:hover {
@@ -15,6 +20,7 @@
   }
 }
 
+
 .menu {
 
   &__link {
@@ -27,6 +33,7 @@
 
     &:hover {
       color: $accent;
+
       .icon {
         stroke: $accent;
       }
@@ -43,6 +50,23 @@
     &.current {
       color: $accent;
     }
+
+    @include mq("tablet", max) {
+      padding: 10px 0;
+      line-height: 1.28;
+      letter-spacing: 0.18px;
+    }
+  }
+
+  &.burger--active {
+
+    @include mq("tablet", max) {
+      line-height: 1.2;
+
+      padding: 15px 0;
+      border-top: 1px solid #EEEFF3;
+      border-bottom: 1px solid #EEEFF3;
+    }
   }
 }
 
@@ -56,6 +80,10 @@
   padding: 7px 14px;
   background-color: $accent;
   transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, ease-in-out;
+
+  @include mq("tablet-2", max) {
+    // font-size: 16px;
+  }
 
   &:hover {
     color: $accent;
@@ -90,9 +118,16 @@
     font-size: 18px;
     letter-spacing: 0.54px;
     padding: 12px 32px;
+
+    @include mq("tablet-2", max) {
+      font-size: 14px;
+      letter-spacing: 0.42px;
+      padding: 8px 24px;
+    }
   }
 
   &--sub {
+    font-size: 14px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -111,9 +146,12 @@
 .more {
   color: $title;
   border-radius: 5px;
-  // margin: auto 0;
   text-decoration: 0.5px underline $title;
   transition: box-shadow 0.5s, text-shadow 0.5s, color 0.5s, text-decoration-color 0.5s ease-in-out;
+
+  @include mq("tablet-2", max) {
+    font-size: 16px;
+  }
 
   &:hover {
     color: $accent;
@@ -128,5 +166,81 @@
   &:active {
     text-decoration-color: transparent;
     text-shadow: 2px 2px 5px $title-05;
+  }
+}
+
+.burger {
+
+  @include mq("tablet", max) {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    z-index: 0;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.50);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-position: center center;
+      max-width: 30px;
+      width: 100%;
+      height: 2px;
+      background-color: $title;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &::before {
+      top: 11px;
+    }
+
+    &::after {
+      bottom: 11px;
+    }
+
+    &--active {
+      transition: transform 0.5s ease-in-out;
+      z-index: -1;
+
+      &.burger::before {
+        transform: rotate(45deg);
+        top: 21px;
+        width: 24px;
+      }
+
+      &.burger::after {
+        transform: rotate(-45deg);
+        bottom: 21px;
+        width: 24px;
+      }
+
+      &.burger--open {
+        z-index: 5;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      max-width: 30px;
+      width: 100%;
+      height: 2px;
+      background-color: $title;
+
+      &.burger--active {
+        transform: scale(0);
+      }
+    }
   }
 }

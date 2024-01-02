@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq("desktop", max) {
+      justify-content: center;
+    }
   }
 
   &__content-inner {
@@ -13,14 +17,48 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+
+    @include mq("desktop", max) {
+      text-align: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+      backdrop-filter: blur(8px) brightness(0.8) saturate(1.5);
+    }
+
+    @include mq("phone", max) {
+      text-align: left;
+      justify-content: left;
+      position: relative;
+      backdrop-filter: none;
+    }
   }
 
   &__title {
     margin-bottom: 45px;
+
+    @include mq("desktop", max) {
+      color: $bg-item;
+    }
+
+    @include mq("phone", max) {
+      margin-bottom: 15px;
+      color: $title;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
+
+    @include mq("desktop", max) {
+      color: $bg-item;
+    }
+
+    @include mq("phone", max) {
+      font-size: 14px;
+      color: $default;
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
@@ -32,14 +70,28 @@
   &__link {
     display: inline-flex;
     transition: opacity 0.5s, box-shadow 0.5, outline ease-in-out;
+
     &:hover {
       box-shadow: 0 0 0 2px $border;
     }
+
     &:focus {
       outline: $accent solid 2px;
     }
+
     &:active {
       opacity: 0.3;
+    }
+  }
+
+  &__img {
+
+    @include mq("desktop", max) {
+      position: relative;
+    }
+
+    @include mq("phone", max) {
+      display: none;
     }
   }
 }
