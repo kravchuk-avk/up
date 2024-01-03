@@ -9,9 +9,13 @@
     align-items: center;
 
     @include mq("tablet", max) {
-      padding: 0 0px;
+      padding: 0 60px;
       flex-wrap: nowrap;
       align-items: stretch;
+    }
+
+    @include mq("phone", max) {
+      padding: 0;
     }
 
   }
@@ -31,7 +35,6 @@
 
   &__img {
     border-radius: 50%;
-    position: relative;
 
     @include mq("desktop", max) {
       margin-bottom: 29px;
@@ -88,8 +91,9 @@
       order: 2;
 
       @include mq("tablet", max) {
-        order: -1;
-        // position: absolute;
+        // order: 0;
+        position: absolute;
+        transform: translate(-117px, 34px);
       }
     }
 
@@ -97,18 +101,15 @@
       order: 4;
 
       @include mq("tablet", max) {
-        order: 3;
-        // position: absolute;
+        // order: 3;
+        position: absolute;
+            transform: translate(117px, 34px);
       }
     }
   }
 
   &__icon {
     fill: $border;
-      @include mq("tablet", max) {
-        order: 2;
-      }
-
   }
 }
 

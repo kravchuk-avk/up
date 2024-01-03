@@ -47,7 +47,7 @@ $('.reviews__box').slick({
   // appendDots: $('.reviews__nav'),
   nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/ico.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000
 });
 
