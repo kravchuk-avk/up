@@ -18,7 +18,18 @@
       height: 45.6vh;
     }
 
+    @media (max-width: 992px) and (orientation: landscape)
+    {
+      height: 100vh;
+    }
+
+// @include mq("tablet", max, 'landscape') {
+//   height: 100vh;
+// }
+
     @include mq("tablet", max) {
+      justify-content: center;
+
       &::before {
         content: "";
         position: absolute;
@@ -60,7 +71,7 @@
     margin-bottom: 20px;
 
     @include mq("desktop", max) {
-    font-size: 50px;
+      font-size: 50px;
     }
 
     @include mq("tablet-2", max) {
