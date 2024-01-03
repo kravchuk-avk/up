@@ -1,8 +1,8 @@
 $(function(){
 
 
-$('.burger, .logo, .menu__link, .address__link, socials__link').on('click', function (event) {
-  $('.header__mob, .logo, .menu, .menu__link, .address__link, .socials__link, .burger, .burger__line').toggleClass('burger--active');
+$('.burger, .menu__link, .address__link, socials__link').on('click', function (event) {
+  $('.header__mob, .menu, .menu__link, .address__link, .socials__link, .burger, .burger__line').toggleClass('burger--active');
 
   $('body').toggleClass('body__lock');
 });

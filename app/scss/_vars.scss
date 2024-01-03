@@ -89,7 +89,22 @@ $breakpoints: ("phone": 560px,
   "desktop": 1230px);
 
 // Миксин для создания медиа-запросов
-@mixin mq($width, $type: min) {
+// @mixin mq($width, $type: min) {
+//   @if map-has-key($breakpoints, $width) {
+//     $width: map-get($breakpoints, $width);
+
+//     @if $type==max {
+//       $width: $width - 1px;
+//     }
+
+//     @media only screen and (#{$type}-width: $width) {
+//       @content;
+//     }
+//   }
+// }
+
+
+@mixin mq($width, $type: min, $orientation: null) {
   @if map-has-key($breakpoints, $width) {
     $width: map-get($breakpoints, $width);
 
@@ -97,12 +112,17 @@ $breakpoints: ("phone": 560px,
       $width: $width - 1px;
     }
 
-    @media only screen and (#{$type}-width: $width) {
+    $media-query: "only screen and (#{$type}-width: #{$width})";
+
+    @if $orientation {
+      $media-query: (#{$media-query} and (orientation: #{$orientation}));
+    }
+
+    @media #{$media-query} {
       @content;
     }
   }
 }
-
 
 
 
