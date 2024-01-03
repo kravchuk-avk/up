@@ -5,7 +5,7 @@
   max-width: 1200px;
   width: 100%;
   padding: 60px 0 55px 5px;
-  z-index: 1;
+  z-index: 2;
   transition: padding 1.5s ease;
 
   &::after {
@@ -26,14 +26,19 @@
   }
 
   &--active {
-    padding: 20px 12px 20px 5px;
-    text-shadow: 0 0 1px $bg-item;
-    transition: padding-top 0.5s, color 0.5s ease;
+    padding: 0;
+    transition: padding-top 0.3s, color 0.3s ease;
 
     &::after {
-      backdrop-filter: blur(6px);
-      background-color: $title-07;
+      backdrop-filter: blur(50px);
+      // background-color: $title-07;
+      // background-color: $bg-default-085;
     }
+
+    @include mq("tablet") {
+      padding: 20px 12px 20px 5px;
+    }
+
   }
 
   &__container {
@@ -119,6 +124,7 @@
 
   &__tools-icon {
     stroke: $title;
+    transition: stroke 0.5s ease-in-out;
   }
 
   &__tools-number {

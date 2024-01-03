@@ -14,12 +14,8 @@
     display: flex;
     z-index: 0;
 
-    @include mq("desktop", max) {
-      height: 45.6vh;
-    }
-
     @include mq("tablet-2", max) {
-      height: 38.4vh;
+      height: 45.6vh;
     }
 
     @include mq("tablet", max) {
@@ -33,6 +29,10 @@
         left: 0;
         z-index: 0;
       }
+    }
+
+    @include mq("phone", max) {
+      height: 38.4vh;
     }
   }
 
