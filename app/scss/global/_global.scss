@@ -21,20 +21,20 @@ body {
 }
 
 .body__lock {
-      @include mq("tablet", max) {
-  overflow: hidden;
+  @include mq("tablet", max) {
+    overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: $bg-menu-05;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+    &::before {
+      content: "";
+      position: fixed;
+      background-color: $bg-menu-05;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
   }
-}
 }
 
 .main {
@@ -82,12 +82,12 @@ body {
 
   @include mq("desktop", max) {
     font-size: 30px;
-      margin-bottom: 45px;
+    margin-bottom: 45px;
   }
 
   @include mq("tablet", max) {
     font-size: 24px;
-      margin-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -226,6 +226,7 @@ body {
 
   &__icon-arrowright {
     fill: $bg-item;
+    transition: fill 0.5s ease-in-out;
   }
 }
 
@@ -295,7 +296,7 @@ body {
     line-height: 2;
     letter-spacing: 0.18px;
     border-radius: 5px;
-    transition: color 0.5s, box-shadow 0.5s, text-shadow 0.5s, stroke 0.5s ease-in-out;
+    transition: color 0.5s, box-shadow 0.5s, text-shadow 0.5s ease-in-out;
 
     &:hover {
       color: $accent;
@@ -318,6 +319,7 @@ body {
     stroke: $default;
     fill: none;
     margin-right: 7px;
+    transition: stroke 0.5s ease-in-out;
   }
 }
 
@@ -334,7 +336,7 @@ body {
     height: 39px;
     border-radius: 50%;
     background-color: $bs-item;
-    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s ease-in-out;
+    transition: box-shadow 0.5s, background-color 0.5s ease-in-out;
 
     &:hover {
       background-color: $accent;
@@ -360,5 +362,6 @@ body {
 
   &__icon {
     fill: $default;
+    transition: fill 0.5s ease-in-out;
   }
 }
