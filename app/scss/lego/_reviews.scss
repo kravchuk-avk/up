@@ -49,11 +49,17 @@
     }
   }
 
+  &__icon {
+    fill: currentColor;
+    transition: fill 0.5s ease-in-out;
+  }
+
   &__btn {
     width: 34px;
     height: 34px;
     border-radius: 50%;
     border: 3px solid $border;
+    color: $border;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,10 +69,7 @@
     &:hover {
       background-color: $bg-plus;
       border-color: $accent-05;
-
-      .reviews__icon {
-        fill: $accent-05;
-      }
+      color: $accent-05;
     }
 
     &:focus {
@@ -76,24 +79,29 @@
     &:active {
       background-color: $bg-plus;
       border-color: $bg-plus;
-
-      .reviews__icon {
-        fill: $accent;
-      }
+      color: $accent;
     }
 
     &:disabled {
       border-color: $accent;
+      color: $accent;
+    }
 
-      .reviews__icon {
-        fill: $accent;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 44px;
+      width: 44px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     &--prev {
       order: 2;
 
       @include mq("tablet", max) {
+        z-index: 1;
         position: absolute;
         transform: translate(-117px, 34px);
       }
@@ -103,15 +111,11 @@
       order: 4;
 
       @include mq("tablet", max) {
+        z-index: 1;
         position: absolute;
         transform: translate(117px, 34px);
       }
     }
-  }
-
-  &__icon {
-    fill: $border;
-    transition: fill 0.5s ease-in-out;
   }
 }
 
@@ -127,6 +131,11 @@
     font-style: italic;
     padding: 0 40px;
     margin-bottom: 30px;
+
+    @include mq("tablet", max) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
 
     &::before {
       content: '';
@@ -159,11 +168,6 @@
 
     & p:not(:last-child) {
       margin-bottom: 15px;
-    }
-
-    @include mq("tablet", max) {
-      font-size: 14px;
-      margin-bottom: 20px;
     }
   }
 
@@ -204,6 +208,7 @@
     display: flex;
 
     button {
+      position: relative;
       font-size: 0;
       width: 15px;
       height: 15px;
@@ -223,6 +228,16 @@
 
       &:active {
         background-color: $accent-05;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 44px;
+        width: 28px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
