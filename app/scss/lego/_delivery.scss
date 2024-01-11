@@ -25,6 +25,7 @@
 
     @include mq("tablet", max) {
       margin: 0 auto;
+
     }
 
     @include mq("phone", max) {
@@ -71,13 +72,13 @@
   &__text {
     margin-bottom: 30px;
 
-    p:not(:last-child) {
-      margin-bottom: 15px;
-    }
-
     @include mq("desktop", max) {
       font-size: 18px;
       margin-bottom: 20px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 
@@ -93,6 +94,10 @@
     display: flex;
     align-items: center;
 
+    @include mq("desktop", max) {
+      font-size: 15px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
 
@@ -100,15 +105,15 @@
         margin-bottom: 15px;
       }
     }
-
-    @include mq("desktop", max) {
-      font-size: 15px;
-    }
   }
 
   &__icon {
     margin-right: 30px;
     transition: fill 0.5s ease-in-out;
+
+    @include mq("desktop", max) {
+      margin-right: 10px;
+    }
 
     &--timer {
       fill: $accent;
@@ -120,10 +125,6 @@
 
     &--restaurant {
       fill: $icon2;
-    }
-
-    @include mq("desktop", max) {
-      margin-right: 10px;
     }
   }
 

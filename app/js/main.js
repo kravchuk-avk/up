@@ -1,16 +1,11 @@
 $(function(){
 
 
-$('.burger, .menu__link, .address__link, socials__link').on('click', function (event) {
-  $('.header__mob, .menu, .menu__link, .address__link, .socials__link, .burger, .burger__line').toggleClass('burger--active');
+$('.burger-button').on('click', function (event) {
+  $('.mobile-menu, .burger-button, .burger-button__line').toggleClass('active');
 
-  $('body').toggleClass('body__lock');
+  $('body').toggleClass('lock');
 });
-
-//   $('.body__lock').on('click', function (event) {
-//   $('.header__mob, .logo, .menu, .menu__link, .address__link, .socials__link, .burger, .burger__line').removeClass('burger--active');
-
-// });
 
 $(".logo, .header__menu-link").on("click", function (event) {
   event.preventDefault();
@@ -47,7 +42,7 @@ $('.reviews__box').slick({
   // appendDots: $('.reviews__nav'),
   nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/ico.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000
 });
 
