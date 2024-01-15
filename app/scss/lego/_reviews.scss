@@ -248,9 +248,3 @@
     }
   }
 }
-
-@include mq("tablet", max) {
-  .reviews__box .slick-dots {
-    display: none !important;
-  }
-}

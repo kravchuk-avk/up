@@ -1,9 +1,10 @@
 .hero {
   padding-top: 159px;
 
-  @include mq("tablet", max) {
-    padding-top: 75px;
+  @include mq("tablet-2", max) {
+    padding-top: 72px;
   }
+  
 
   &__content {
     position: relative;
@@ -22,9 +23,10 @@
       height: 38.4vh;
     }
 
-    // @include mq("tablet-2", max) {
-    //   height: 38.4vh;
-    // }
+    @include mq("phone", max) {
+      height: auto;
+      padding: 25px 0;
+    }
 
     @include mq("tablet", max) {
       justify-content: center;
@@ -46,7 +48,9 @@
     // }
 
     @media (max-width: 992px) and (orientation: landscape) {
-      height: 69.8vh;
+            height: auto;
+            padding: 25px 0;
+      // height: 69.8vh;
     }
   }
 

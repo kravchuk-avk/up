@@ -150,24 +150,33 @@
     top: 0;
     height: 100vh;
     display: block;
-    background-color: $bg-item;
-    overflow: auto;
+    // overflow: auto;
     z-index: 4;
     padding: 0 15px;
     transform: translate(-50%, -100%);
     transition: transform 0.5s;
 
-    // &::before {
-    //   content: "";
-    //   position: fixed;
-    //   background-color: red;
-    //   height: 100%;
-    //   width: 100vw;
-    //   bottom: 0;
-    //   right: 0;
-    //   left: 0;
-    //   z-index: 5;
-    // }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-menu-05;
+      height: 100%;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+    background-color: $bg-item;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
 
     &.active {
       transform: translate(0);
@@ -195,10 +204,10 @@
 
     @media (max-width: 992px) and (orientation: landscape) {
       padding: 0;
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: space-around;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
 

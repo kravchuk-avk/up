@@ -43,7 +43,17 @@ $('.reviews__box').slick({
   nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/ico.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
   // autoplay: true,
-  autoplaySpeed: 2000
+  autoplaySpeed: 2000,
+
+
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }
+  ]
 });
 
 slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
