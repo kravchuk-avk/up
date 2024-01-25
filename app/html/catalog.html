@@ -1,0 +1,44 @@
+@@include('components/_head.html', { "namePage": "Каталог продуктів" })
+
+@@include('components/_header.html', { 
+    'menu': [ 
+    { "line": '<a class="menu__link" href="./index.html"> Головна </a></li>' },
+    { "line": '<span class="menu__link current"> Страви </span></li>' },
+    { "line": '<a class="menu__link" href="#"> Контакти </a></li>' }
+    ]
+  })
+
+<main class="main">
+  <h1 class="sr-only">сервіс доставки їжі</h1>
+  @@include('components/_breadcrumbs.html', { 
+    "breadcrumbs": [ 
+    { "url": "./index.html", "label": "Головна" }
+    ],
+    "span": "Каталог продуктів"
+  })
+
+
+<div class="filter__item filtr-cost">
+
+<h3 class="filter__title">Ціна</h3>
+<form class="range-cost__form" action="#">
+    <input class="range-cost__input"  type="text" name="range" value=""
+        data-min="50"
+        data-max="1250"
+        data-from="100"
+        data-to="1000"
+    />
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+</main>
+@@include('components/_footer.html')
+@@include('components/_footer-scripts.html')
