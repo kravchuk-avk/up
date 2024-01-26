@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Доставка їжі" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог продуктів | Сімплфуд - сервіс доставки їжі</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png"/>
+    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#ff6838"/>
+    <meta name="msapplication-TileColor" content="#ff6838" />
+    <meta name="theme-color" content="#ff6838" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body id="body">
+    <div class="wrapper">
+
+<header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a class="logo header__logo" href="#body">
+        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип"/>
+      </a>
+      <ul class="menu header__menu">
+        
+          <li class="menu__item">
+            <a class="menu__link" href="./index.html"> Головна </a></li>
+          </li>
+        
+          <li class="menu__item">
+            <span class="menu__link current"> Страви </span></li>
+          </li>
+        
+          <li class="menu__item">
+            <a class="menu__link" href="#"> Контакти </a></li>
+          </li>
+        
+      </ul>
+    </nav>
+    <ul class="header__tools-list">
+      <li class="header__tools-item">
+        <button class="header__tools-btn" type="button">
+          <svg class="header__tools-icon" width="19" height="19">
+            <use href="images/icon/ico.svg#icon-search"></use>
+          </svg>
+          <span class="sr-only"> Пошук </span>
+        </button>
+      </li>
+      <li class="header__tools-item">
+        <button class="header__tools-btn" type="button">
+          <svg class="header__tools-icon" width="19" height="19">
+            <use href="images/icon/ico.svg#icon-cart"></use>
+          </svg>
+          <span class="sr-only"> Корзина </span>
+          <span class="header__tools-number"> 4 </span>
+        </button>
+      </li>
+    </ul>
+    <button class="burger-button" type="button">
+      <span class="burger-button__line"> </span>
+      <span class="sr-only">Кнопка меню</span>
+    </button>
+    <div class="mobile-menu">
+      <div class="mobile-menu__inner">
+        <a class="logo" href="#body">
+          <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип"/>
+        </a>
+        <button class="burger-button burger-button--close" type="button">
+          <span class="burger-button__line burger-button__line--close">
+          </span>
+          <span class="sr-only">Кнопка меню</span>
+        </button>
+      </div>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item">
+          <span class="menu__link current"> Головна </span>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"> Страви </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#"> Контакти </a>
+        </li>
+      </ul>
+      <div class="address mobile-menu__address">
+        <ul class="address__list">
+          <li class="address__item">
+            <a class="address__link" href="geo:#">
+              <svg class="address__icon" width="24" height="24">
+                <use href="images/icon/ico.svg#icon-location"></use>
+              </svg>
+              вул. Т.Г.Шевченка, 1
+            </a>
+          </li>
+          <li class="address__item">
+            <a class="address__link" href="tel:+380501112233">
+              <svg class="address__icon" width="24" height="24">
+                <use href="images/icon/ico.svg#icon-call"></use>
+              </svg>
+              380501112233
+            </a>
+          </li>
+          <li class="address__item">
+            <a class="address__link" href="mailto:support@sfood.com">
+              <svg class="address__icon" width="24" height="24">
+                <use href="images/icon/ico.svg#icon-message"></use>
+              </svg>
+              support@sfood.com
+            </a>
+          </li>
+        </ul>
+        <ul class="socials">
+          <li class="socials__inner">
+            <a class="socials__link" target="_blank" href="https://www.facebook.com/">
+              <svg class="socials__icon" width="10" height="21">
+                <use href="images/icon/ico.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only"> Посилання на фейсбук </span>
+            </a>
+          </li>
+          <li class="socials__inner">
+            <a class="socials__link" target="_blank" href="https://twitter.com/">
+              <svg class="socials__icon" width="21" height="17">
+                <use href="images/icon/ico.svg#icon-twitter"></use>
+              </svg>
+              <span class="sr-only"> Посилання на твітер </span>
+            </a>
+          </li>
+          <li class="socials__inner">
+            <a class="socials__link" target="_blank" href="https://www.instagram.com/">
+              <svg class="socials__icon" width="20" height="20">
+                <use href="images/icon/ico.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only"> Посилання на інстаграм </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <h1 class="sr-only">сервіс доставки їжі</h1>
+  <div class="breadcrumbs container">
+  <ul class="breadcrumbs__list">
+    
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="./index.html">
+        Головна
+      </a>
+    <svg class="breadcrumbs__icon" width="6" height="10">
+      <use href="images/icon/chevron.svg#chevron"></use>
+    </svg>
+    </li>
+  
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link current">
+        Каталог продуктів
+      </span>
+    </li>
+  </ul>
+</div>
+
+
+<div class="filter__item filtr-cost">
+
+<h3 class="filter__title">Ціна</h3>
+<form class="range-cost__form" action="#">
+    <input class="range-cost__input"  type="text" name="range" value=""
+        data-min="50"
+        data-max="1250"
+        data-from="100"
+        data-to="1000"
+    />
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+</main>
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__sub">
+      <a class="logo footer__logo" href="#body">
+        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип"/>
+      </a>
+      <form class="sub-form" name="sub-form">
+        <label class="sub-form__label">
+          <span class="sr-only"> ваш емеїл </span>
+          <input class="sub-form__input" type="email" name="email" placeholder="Ваш email" required/>
+        </label>
+        <button class="btn btn--sub" type="submit">
+          <svg class="sub-form__icon" width="17" height="16">
+            <use href="images/icon/ico.svg#icon-telegram"></use>
+          </svg>
+          Підписатися
+        </button>
+      </form>
+    </div>
+    <ul class="menu footer__menu">
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Як це працює </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Про нас </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Застосунок </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Продукти </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Новини </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Блог </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Страви </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Партнери </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Що нового? </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Меню </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> ЧаПи </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#"> Мапа сайту </a>
+      </li>
+    </ul>
+    <address class="address footer__address">
+      <ul class="address__list">
+        <li class="address__item">
+          <a class="address__link" href="geo:#">
+            <svg class="address__icon" width="24" height="24">
+              <use href="images/icon/ico.svg#icon-location"></use>
+            </svg>
+            вул. Т.Г.Шевченка, 1
+          </a>
+        </li>
+        <li class="address__item">
+          <a class="address__link" href="tel:+380501112233">
+            <svg class="address__icon" width="24" height="24">
+              <use href="images/icon/ico.svg#icon-call"></use>
+            </svg>
+            380501112233
+          </a>
+        </li>
+        <li class="address__item">
+          <a class="address__link" href="mailto:support@sfood.com">
+            <svg class="address__icon" width="24" height="24">
+              <use href="images/icon/ico.svg#icon-message"></use>
+            </svg>
+            support@sfood.com
+          </a>
+        </li>
+      </ul>
+      <ul class="socials">
+        <li class="socials__inner">
+          <a class="socials__link" target="_blank" href="https://www.facebook.com/">
+            <svg class="socials__icon" width="10" height="21">
+              <use href="images/icon/ico.svg#icon-facebook"></use>
+            </svg>
+            <span class="sr-only"> Посилання на фейсбук </span>
+          </a>
+        </li>
+        <li class="socials__inner">
+          <a class="socials__link" target="_blank" href="https://twitter.com/">
+            <svg class="socials__icon" width="21" height="17">
+              <use href="images/icon/ico.svg#icon-twitter"></use>
+            </svg>
+            <span class="sr-only"> Посилання на твітер </span>
+          </a>
+        </li>
+        <li class="socials__inner">
+          <a class="socials__link" target="_blank" href="https://www.instagram.com/">
+            <svg class="socials__icon" width="20" height="20">
+              <use href="images/icon/ico.svg#icon-instagram"></use>
+            </svg>
+            <span class="sr-only"> Посилання на інстаграм </span>
+          </a>
+        </li>
+      </ul>
+    </address>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copyright">&copy; 2023 Simple Food</p>
+  </div>
+</footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

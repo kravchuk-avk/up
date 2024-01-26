@@ -1,0 +1,19 @@
+<div class="breadcrumbs container">
+  <ul class="breadcrumbs__list">
+    @@for (var i = 0; i < breadcrumbs.length; i++) {
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="${breadcrumbs[i].url}">
+        ${breadcrumbs[i].label}
+      </a>
+    <svg class="breadcrumbs__icon" width="6" height="10">
+      <use href="images/icon/chevron.svg#chevron"></use>
+    </svg>
+    </li>
+  }
+    <li class="breadcrumbs__item">
+      <span class="breadcrumbs__link current">
+        @@span
+      </span>
+    </li>
+  </ul>
+</div>
