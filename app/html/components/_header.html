@@ -47,15 +47,11 @@
         </button>
       </div>
       <ul class="menu mobile-menu__menu">
-        <li class="menu__item">
-          <span class="menu__link current"> Головна </span>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#"> Страви </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#"> Контакти </a>
-        </li>
+        @@for (var i = 0; i < menu.length; i++) {
+          <li class="menu__item">
+            ${menu[i].line}
+          </li>
+        }
       </ul>
       <div class="address mobile-menu__address">
         <ul class="address__list">

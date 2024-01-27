@@ -1,9 +1,65 @@
 $(function(){
 
+
+
+
 // бегунок
+var $range = $(".range-cost__input"),
+    $inputFrom = $(".range-cost__input--from"),
+    $inputTo = $(".range-cost__input--to"),
+    instance,    
+    min = min,
+    max = max,
+    from = from,
+    to = to;
+
 $('.range-cost__input').ionRangeSlider({
-        type: "double"
+        type: "double",
+        skin: "round",
+    onStart: updateInputs,
+    onChange: updateInputs
+});
+instance = $range.data("ionRangeSlider");
+
+function updateInputs (data) {
+	from = data.from;
+    to = data.to;
+    
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);	
+}
+
+$inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < min) {
+        val = min;
+    } else if (val > to) {
+        val = to;
+    }
+    
+    instance.update({
+        from: val
     });
+});
+
+$inputTo.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < from) {
+        val = from;
+    } else if (val > max) {
+        val = max;
+    }
+    
+    instance.update({
+        to: val
+    });
+});
+
+
 
 $('.burger-button').on('click', function (event) {
   $('.mobile-menu, .burger-button, .burger-button__line').toggleClass('active');

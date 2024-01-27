@@ -74,15 +74,19 @@
         </button>
       </div>
       <ul class="menu mobile-menu__menu">
-        <li class="menu__item">
-          <span class="menu__link current"> Головна </span>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#"> Страви </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#"> Контакти </a>
-        </li>
+        
+          <li class="menu__item">
+            <a class="menu__link" href="./index.html"> Головна </a></li>
+          </li>
+        
+          <li class="menu__item">
+            <span class="menu__link current"> Страви </span></li>
+          </li>
+        
+          <li class="menu__item">
+            <a class="menu__link" href="#"> Контакти </a></li>
+          </li>
+        
       </ul>
       <div class="address mobile-menu__address">
         <ul class="address__list">
@@ -165,24 +169,128 @@
 </div>
 
 
-<div class="filter__item filtr-cost">
 
-<h3 class="filter__title">Ціна</h3>
-<form class="range-cost__form" action="#">
-    <input class="range-cost__input"  type="text" name="range" value=""
-        data-min="50"
-        data-max="1250"
-        data-from="100"
-        data-to="1000"
-    />
-</form>
+<section class="catalog section">
+  <div class="container">
+    <h2 class="title">Каталог продуктів</h2>
+    <div class="catalog__inner">
+      <aside class="catalog__aside">
+
+        <div class="link-categories">
+          <h3 class="link-categories__title">Категорії</h3>
+          <ul class="link-categories__list">
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Бургери
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Піца
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Сендвічі
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Азійська кухня
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Сети
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Європейська кухня
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Напої
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Алкоголь
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filtr-offers">
+          <h3 class="filtr-offers__title">Пропозиції</h3>
+          <form class="filtr-offers__form" action="#" method="post">
+            <label class="filtr-offers__label">
+              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
+              <span class="filtr-offers__checkbox">
+              </span>
+              Зі знижкою
+            </label>
+          </form>
+          <form class="filtr-offers__form" action="#" method="post">
+            <label class="filtr-offers__label">
+              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
+              <span class="filtr-offers__checkbox">
+              </span>
+              Новинка
+            </label>
+          </form>
+          <form class="filtr-offers__form" action="#" method="post">
+            <label class="filtr-offers__label">
+              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
+              <span class="filtr-offers__checkbox">
+              </span>
+              Хіт сезону
+            </label>
+          </form>
+        </div>
+
+        <div class="range-cost">
+
+          <h3 class="range-cost__title">Ціна</h3>
+
+            <form class="range-cost__form" action="#">
+              <label class="range-cost__label">
+                від
+                <input class="range-cost__input--from" type="text" name="" value="0"/>
+                ₴
+              </label>
+              <label class="range-cost__label">
+                до
+                <input class="range-cost__input--to" type="text" name="" value="0"/>
+                ₴
+              </label>
+              <label class="range-cost__label">
+                <input class="range-cost__input"  type="text" name="" value="" data-min="50" data-max="1250" data-from="100" data-to="1000"/>
+              </label>
+            </form>
+
+
+            <!-- <div class="range-slider">
+    <input type="text" class="js-range-slider" value="" />
 </div>
+<div class="extra-controls">
+    <input type="text" class="js-input-from" value="0" />
+    <input type="text" class="js-input-to" value="0" />
+</div> -->
+        
+        </div>
+    
+      </aside>
 
+      <div class="catalog__product-list">
 
+      </div>
 
+    </div>
 
-
-
+  </div>
+  </section>
 
 
 
