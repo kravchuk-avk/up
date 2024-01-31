@@ -174,10 +174,10 @@
   <div class="container">
     <h2 class="title">Каталог продуктів</h2>
     <div class="catalog__inner">
-      <aside class="catalog__aside">
+      <aside class="aside catalog__aside">
 
-        <div class="link-categories">
-          <h3 class="link-categories__title">Категорії</h3>
+        <div class="aside__item link-categories">
+          <h3 class="aside__title link-categories__title">Категорії</h3>
           <ul class="link-categories__list">
             <li class="link-categories__item">
               <a class="link-categories__link" href="#">
@@ -222,53 +222,61 @@
           </ul>
         </div>
 
-        <div class="filtr-offers">
-          <h3 class="filtr-offers__title">Пропозиції</h3>
-          <form class="filtr-offers__form" action="#" method="post">
-            <label class="filtr-offers__label">
-              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
-              <span class="filtr-offers__checkbox">
+        <div class="aside__item filter-offers">
+          <h3 class="aside__title filter-offers__title">Пропозиції</h3>
+          <ul class="filter-offers__list">
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+            <label class="filter-offers__label">
+              <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+              <span class="filter-offers__checkbox">
               </span>
               Зі знижкою
             </label>
-          </form>
-          <form class="filtr-offers__form" action="#" method="post">
-            <label class="filtr-offers__label">
-              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
-              <span class="filtr-offers__checkbox">
-              </span>
-              Новинка
-            </label>
-          </form>
-          <form class="filtr-offers__form" action="#" method="post">
-            <label class="filtr-offers__label">
-              <input class="filtr-offers__input" type="checkbox" name="filtr-offers" value="">
-              <span class="filtr-offers__checkbox">
-              </span>
-              Хіт сезону
-            </label>
-          </form>
+              </form>
+            </li>
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+              <label class="filter-offers__label">
+                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                <span class="filter-offers__checkbox">
+                </span>
+                Новинка
+              </label>
+              </form>
+            </li>
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+              <label class="filter-offers__label">
+                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                <span class="filter-offers__checkbox">
+                </span>
+                Хіт сезону
+              </label>
+              </form>
+            </li>
+          </ul>
         </div>
 
-        <div class="range-cost">
+        <div class="aside__item range-cost">
 
-          <h3 class="range-cost__title">Ціна</h3>
+          <h3 class="aside__title range-cost__title">Ціна</h3>
 
-            <form class="range-cost__form" action="#">
-              <label class="range-cost__label">
-                від
-                <input class="range-cost__input--from" type="text" name="" value="0"/>
-                ₴
-              </label>
-              <label class="range-cost__label">
-                до
-                <input class="range-cost__input--to" type="text" name="" value="0"/>
-                ₴
-              </label>
-              <label class="range-cost__label">
-                <input class="range-cost__input"  type="text" name="" value="" data-min="50" data-max="1250" data-from="100" data-to="1000"/>
-              </label>
-            </form>
+          <form class="range-cost__form" action="#">
+            <label class="range-cost__label">
+              від
+              <input class="range-cost__input--from" type="text" name="" value="0"/>
+              ₴
+            </label>
+            <label class="range-cost__label">
+              до
+              <input class="range-cost__input--to" type="text" name="" value="0"/>
+              ₴
+            </label>
+            <label class="range-cost__label">
+              <input class="range-cost__input"  type="text" name="" value="" data-min="50" data-max="1250" data-from="100" data-to="1000"/>
+            </label>
+          </form>
 
 
             <!-- <div class="range-slider">
@@ -291,6 +299,15 @@
 
   </div>
   </section>
+
+
+<section class="catalog">
+  <aside class="catalog__aside">
+    <div class="link-categories"></div>
+    <div class="filter-offers"></div>
+    <div class="range-cost"></div>
+  </aside>
+</section>
 
 
 
