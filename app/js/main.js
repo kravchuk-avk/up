@@ -138,9 +138,10 @@ slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
 // Функция для инициализации слайдера в секции "restaurant"
 function initRestaurantSlider() {
-  $('.restaurant__list').slick({
+  $('.restaurant__list, .promo__list').slick({
     dots: true,
     arrows: false,
+    adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 2000
   });
@@ -159,7 +160,7 @@ window.matchMedia('(max-width: 767px)').addListener(function (event) {
     initRestaurantSlider();
   } else {
     // Если экран становится узким, уничтожаем слайдер
-    $('.restaurant__list').slick('unslick');
+    $('.restaurant__list, .promo__list').slick('unslick');
   }
 });
 
