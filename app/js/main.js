@@ -168,3 +168,5 @@ window.matchMedia('(max-width: 767px)').addListener(function (event) {
   var mixer = mixitup('.categories__product-list');
 
 });
+
+$('.select-style').styler();
