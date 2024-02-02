@@ -50,21 +50,29 @@
 
   &__icon {
     margin: 0 5px;
+    fill: $border;
   }
 }
 
 .catalog {
-
+position: relative;
   &__inner {
   display: flex;
+  justify-content: space-between;
+  }
+
+  &__content {
+    width: 100%;
+        position: relative;
   }
 
   &__product-list {
+
     display: grid;
-    justify-content: center;
+    justify-content: flex-end;
     align-content: center;
     grid-template-columns: repeat(auto-fill, 210px);
-    gap: 30px;
+    gap: 10px;
     margin-bottom: 60px;
 
     @include mq("tablet", max) {
@@ -80,7 +88,9 @@
 }
 
 .aside {
+  // position: static;
   max-width: 270px;
+  width: 100%;
 
   &__item{
     border-radius: 5px;
@@ -221,7 +231,24 @@
 }
 
 .product-sort {
+   position: absolute;
+  //  left: calc(50% + 5px);
+    // top: 0;
+// left: 80.7%;
 
+top: 0px;
+left: 55.4%;
+transform: translateX(100%);
+z-index: 5;
+    // width: 100vw;
+    // height: 100%;
+// top: 60px;
+    
+  @include mq("desktop", max) {
+      //  position: relative;
+      //  transform: none;
+      //  left: 0px;
+  }
 
   &__form {
     display: flex;
@@ -265,6 +292,7 @@
     display: block;
     width: 100%;
 
+
     &:hover {
       border-color: $accent;
       background: $bg-item;
@@ -294,7 +322,7 @@
     width: 6px;
     height: 10px;
     border: none;
-    background-image: url('../../images/icon/chevron.svg');
+    background-image: url('../../images/icon/chevron.svg#chevron');
     transform: rotate(90deg);
 
     &:hover {
@@ -321,5 +349,96 @@
       color: $default;
     }
   }
+}
+
+
+.pagination {
+
+  &__list {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill 0.5s ease-in-out;
+
+    &--arrow-prev {
+      transform: rotate(180deg);
+    }
+
+  &.current {
+    fill: $border;
+    }
+  }
+
+  &__link {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.54px;
+    color: $title;
+    background-color: $accent-01;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s ease-in-out;
+
+    &:hover {
+    background-color: $accent;
+    color: $bg-item;
+    }
+
+    &:focus {
+      border-color: $accent;
+    }
+
+    &:active {
+      color: $title;
+      background-color: $accent-01;
+      box-shadow: 0px -1px 4px 2px $bg-menu-015 inset;
+    }
+
+    &.current {
+      border: 1px solid $title;
+    }
+
+  }
+
+
+}
+
+.promo {
+  &__list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fill, 370px);
+    gap: 30px;
+
+    @include mq("desktop", max) {
+      grid-template-columns: repeat(auto-fill, 345px);
+      gap: 15px;
+    }
+
+    @include mq("tablet", max) {
+      display: block;
+      max-width: 345px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+    &__item {
+
+      @include mq("tablet", max) {
+        margin-bottom: 30px;
+      }
+    }
+
 }
 
