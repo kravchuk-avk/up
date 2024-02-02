@@ -12,9 +12,8 @@
   <button class="btn" type="button">До кошика</button>
 </article> -->
 
-
+@@for (var i = 0; i < productCard.length; i++) {
 <article class="product-card">
-  @@for (var i = 0; i < productCard.length; i++) {
   <a class="product-card__link" href="${productCard[i].href}">
     <img class="product-card__img" src="${productCard[i].imgLink}" width="140" height="140" alt="${productCard[i].alt}" />
     <h3 class="product-card__title">
@@ -26,5 +25,5 @@
     <span class="currency"> грн. </span>
   </span>
   <button class="btn" type="button">До кошика</button>
-  }
 </article>
+}
