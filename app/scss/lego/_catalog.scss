@@ -20,6 +20,10 @@
     }
   }
 
+  &__item {
+    align-items: center;
+  }
+
   &__link {
     color: $breadcrumbs;
     font-size: 14px;
@@ -50,6 +54,10 @@
 }
 
 .catalog {
+
+  &__inner {
+  display: flex;
+  }
 }
 
 .aside {
@@ -76,15 +84,18 @@
 
     + * {
       padding: 25px 15px;
-
-      *:not(:last-child) {
-        margin-bottom: 3px;
-      }
     }
   }
 }
 
 .link-categories {
+
+  &__item {
+  
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
 
   &__link {
     font-size: 18px;
@@ -126,6 +137,11 @@
       background-position: center;
       border: 1px solid $title;
     }
+
+    &:hover+.filter-offers__checkbox,
+    &:focus+.filter-offers__checkbox {
+      border: 1px solid $accent;
+    }
   }
 
   &__checkbox {
@@ -135,19 +151,13 @@
     border-radius: 3px;
     border: 1px solid $bs-item;
     background-color: $accent-02;
-
-    &:hover,
-    &:focus {
-      border: 1px solid $accent;
-    }
   }
 }
 
 .range-cost {
   &__input {
     background: $bg-plus;
-
-
+    line-height: 1;
 
     &--to,
     &--from {
@@ -155,7 +165,8 @@
       border-radius: 3px;
       border: 1px solid $accent-01;
       background: $bg-plus;
-          // padding: 12px 15px;
+              padding: 7px 5px;
+              text-align: center;
     }
   }
 
@@ -164,20 +175,22 @@
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.48px;
-
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
+      &:first-child {
+        margin-right: 11px;
   }
-
+  }
 
 .irs--round .irs-bar {
   background-color: $accent;
+  height: 2px;
 }
 
 .irs--round .irs-handle {
   background-color: $accent;
   border: 4px solid $accent;
+  width: 18px;
+  height: 18px;
+  top: 28px;
 }
 
 .irs-min,
@@ -187,3 +200,107 @@
   display: none;
 }
 }
+
+.product-sort {
+
+
+  &__form {
+    display: flex;
+    gap: 20px;
+    }
+
+  &__option {
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.42px;
+  }
+
+  &__name-sort {
+    max-width: 130px;
+    width: 100%;
+  }
+
+  &__per-page {
+    max-width: 92px;
+    width: 100%;
+  }
+}
+
+.jq-selectbox {
+  vertical-align: middle;
+  z-index: 10;
+
+  &__select {
+    position: relative;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 13px 40px 13px 15px;
+    border-radius: 3px;
+    border: 1px solid $border;
+    background: $bg-item;
+    box-shadow: none;
+    text-shadow: none;
+    display: block;
+    width: 100%;
+
+    &:hover {
+      border-color: $accent;
+      background: $bg-item;
+      color: $accent;
+    }
+  }
+
+  &__select-text {
+    display: block;
+    width: 100%;
+    @include char-clamp(10);
+  }
+
+  &__trigger {
+    border-left: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+  }
+
+  &__trigger-arrow {
+    position: absolute;
+    top: 19px;
+    right: 17px;
+    width: 6px;
+    height: 10px;
+    border: none;
+    background-image: url('../../images/icon/chevron.svg');
+    transform: rotate(90deg);
+
+    &:hover {
+      color: $accent-01;
+    }
+  }
+
+  &__dropdown {
+    background-color: $bg-item;
+    width: -webkit-fill-available;
+  }
+
+  & li.selected {
+    background-color: $accent;
+    color: #fff;
+  }
+
+  & li {
+    padding: 5px 10px 6px;
+    color: #231f20;
+
+    &:hover {
+      background-color: $accent-01;
+      color: $default;
+    }
+  }
+}
+

@@ -1,4 +1,4 @@
-<article class="product-card">
+<!-- <article class="product-card">
   <a class="product-card__link" href="#">
     <img class="product-card__img" src="@@imgLink" width="140" height="140" alt="@@title" />
     <h3 class="product-card__title">
@@ -10,4 +10,21 @@
     <span class="currency"> грн. </span>
   </span>
   <button class="btn" type="button">До кошика</button>
+</article> -->
+
+
+<article class="product-card">
+  @@for (var i = 0; i < productCard.length; i++) {
+  <a class="product-card__link" href="${productCard[i].href}">
+    <img class="product-card__img" src="${productCard[i].imgLink}" width="140" height="140" alt="${productCard[i].alt}" />
+    <h3 class="product-card__title">
+      ${productCard[i].title}
+    </h3>
+  </a>
+  <span class="product-card__price">
+    ${productCard[i].price}
+    <span class="currency"> грн. </span>
+  </span>
+  <button class="btn" type="button">До кошика</button>
+  }
 </article>

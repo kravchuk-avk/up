@@ -151,3 +151,17 @@ $breakpoints: ("phone": 576px,
   font-size: 14px;
   @include line-clamp(3);
 }
+
+@mixin char-clamp($chars: 20) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  max-width: $chars * 1ch; // Кількість символів помножена на ширину одного символу
+}
+
+.class {
+  font-size: 14px;
+  @include char-clamp(30); // Наприклад, обмеження в 30 символів
+}

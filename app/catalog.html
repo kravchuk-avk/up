@@ -148,7 +148,10 @@
 
 <main class="main">
   <h1 class="sr-only">сервіс доставки їжі</h1>
-  <div class="breadcrumbs container">
+  <div class="breadcrumbs">
+  <div class="container">
+    
+
   <ul class="breadcrumbs__list">
     
     <li class="breadcrumbs__item">
@@ -166,6 +169,7 @@
       </span>
     </li>
   </ul>
+    </div>
 </div>
 
 
@@ -174,6 +178,8 @@
   <div class="container">
     <h2 class="title">Каталог продуктів</h2>
     <div class="catalog__inner">
+
+
       <aside class="aside catalog__aside">
 
         <div class="aside__item link-categories">
@@ -221,7 +227,6 @@
             </li>
           </ul>
         </div>
-
         <div class="aside__item filter-offers">
           <h3 class="aside__title filter-offers__title">Пропозиції</h3>
           <ul class="filter-offers__list">
@@ -257,11 +262,8 @@
             </li>
           </ul>
         </div>
-
         <div class="aside__item range-cost">
-
           <h3 class="aside__title range-cost__title">Ціна</h3>
-
           <form class="range-cost__form" action="#">
             <label class="range-cost__label">
               від
@@ -274,40 +276,90 @@
               ₴
             </label>
             <label class="range-cost__label">
-              <input class="range-cost__input"  type="text" name="" value="" data-min="50" data-max="1250" data-from="100" data-to="1000"/>
+              <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
             </label>
           </form>
-
-
-            <!-- <div class="range-slider">
-    <input type="text" class="js-range-slider" value="" />
-</div>
-<div class="extra-controls">
-    <input type="text" class="js-input-from" value="0" />
-    <input type="text" class="js-input-to" value="0" />
-</div> -->
-        
         </div>
     
       </aside>
 
-      <div class="catalog__product-list">
+      <div class="catalog__content">
+        <div class="product-sort">
+          <form class="product-sort__form"  action="#">
+            <select class="product-sort__name-sort select-style" name="name-sort">
+              <!-- <svg class="product-sort__icon" width="6" height="11">
+                <use href="images/icon/chevron.svg#chevron"></use>
+              </svg> -->
+              <option class="product-sort__option" value="">За назвою</option>
+              <option class="product-sort__option" value="">Бургери</option>
+              <option class="product-sort__option" value="">Піца</option>
+              <option class="product-sort__option" value="">Сендвічі</option>
+              <option class="product-sort__option" value="">Азійська кухня Азійська кухня</option>
+            </select>
+            <select class="product-sort__per-page select-style" name="per-page">
 
+              <option class="product-sort__option" value="">по 12</option>
+              <option class="product-sort__option" value="">10</option>
+              <option class="product-sort__option" value="">15</option>
+              <option class="product-sort__option" value="">25</option>
+              <option class="product-sort__option" value="">40</option>
+            </select>
+          </form>
+        </div>
+        <div class="catalog__product-list">
+          
+
+<!-- <article class="product-card">
+  <a class="product-card__link" href="#">
+    <img class="product-card__img" src="@@imgLink" width="140" height="140" alt="@@title" />
+    <h3 class="product-card__title">
+      @@title
+    </h3>
+  </a>
+  <span class="product-card__price">
+    @@cost
+    <span class="currency"> грн. </span>
+  </span>
+  <button class="btn" type="button">До кошика</button>
+</article> -->
+
+
+<article class="product-card">
+  
+  <a class="product-card__link" href="#">
+    <img class="product-card__img" src="./images/card/cheese.jpg" width="140" height="140" alt="Чізбургер з листям салату" />
+    <h3 class="product-card__title">
+      Чізбургер з листям салату
+    </h3>
+  </a>
+  <span class="product-card__price">
+    160
+    <span class="currency"> грн. </span>
+  </span>
+  <button class="btn" type="button">До кошика</button>
+  
+  <a class="product-card__link" href="#">
+    <img class="product-card__img" src="./images/card/cheese.jpg" width="140" height="140" alt="Чізбургер з листям салату" />
+    <h3 class="product-card__title">
+      Чізбургер з листям салату
+    </h3>
+  </a>
+  <span class="product-card__price">
+    160
+    <span class="currency"> грн. </span>
+  </span>
+  <button class="btn" type="button">До кошика</button>
+  
+</article>
+
+
+        </div>
       </div>
 
     </div>
 
   </div>
   </section>
-
-
-<section class="catalog">
-  <aside class="catalog__aside">
-    <div class="link-categories"></div>
-    <div class="filter-offers"></div>
-    <div class="range-cost"></div>
-  </aside>
-</section>
 
 
 
