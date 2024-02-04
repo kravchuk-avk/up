@@ -73,6 +73,11 @@
         }
   }
 
+& .title {
+  @include mq("tablet", max) {
+margin-bottom: 20px;
+}
+}
 
   &__inner {
   display: flex;
@@ -111,6 +116,12 @@
     @include mq("phone", max) {
       grid-template-columns: repeat(2, minmax(0, 170px));
     }
+
+& .product-card:nth-child(6) ~ .product-card {
+  @include mq("tablet", max) {
+  display: none;
+  }
+}
   }
 
 
@@ -316,14 +327,14 @@
 
 .jq-selectbox {
   vertical-align: middle;
-  // z-index: 10;
+  z-index: 0;
 
   &__select {
     position: relative;
     font-family: Rubik;
     font-size: 14px;
     font-weight: 400;
-    padding: 13px 40px 13px 15px;
+    padding: 12px 40px 12px 15px;
     border-radius: 3px;
     border: 1px solid $border;
     background: $bg-item;
@@ -463,6 +474,13 @@
 }
 
 .promo {
+  text-align: center;
+
+& .title {
+
+  margin-bottom: 40px;
+}
+
   &__list {
     display: grid;
     justify-content: center;
@@ -486,7 +504,7 @@
     &__item {
 
       @include mq("tablet", max) {
-        margin-bottom: 30px;
+        margin-bottom: 45px;
       }
     }
 

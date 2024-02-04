@@ -307,19 +307,110 @@
   display: none;
 
   @include mq("tablet-2", max) {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
     z-index: 0;
+    fill: $accent;
+    background-color: $accent-01;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
 
     &.active {
+      z-index: 0;
+    }
+
+    &--close {
+      fill: $title;
+      margin-left: auto;
+    }
+
+  }
+}
+
+.mobile-filter {
+  display: none;
+
+  @include mq("tablet-2", max) {
+    position: absolute;
+    left: 0;
+    right: 55px;
+    top: 0;
+    height: 100vh;
+    display: block;
+    // overflow-Y: auto;
+    z-index: 4;
+    // padding: 0 15px;
+    transform: translate(-50%, -150%);
+    transition: transform 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-menu-05;
+      height: 100%;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $bg-item;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
       z-index: -1;
     }
 
+    &.active {
+      transform: translate(0);
+      position: fixed;
+    }
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      padding: 0;
+    }
+  }
+
+  &__menu {
+    line-height: 1.2;
+    padding: 13px 0;
+    border-top: 1px solid $border-plus;
+    border-bottom: 1px solid $border-plus;
+
+    @media (max-width: 992px) and (orientation: landscape) {
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__address {
+    padding: 10px 0;
+
+    @include mq("tablet-2", max) {
+      display: block;
+    }
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      padding: 0;
+    }
   }
 }
