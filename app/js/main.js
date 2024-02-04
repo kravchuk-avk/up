@@ -61,11 +61,19 @@ $inputTo.on("input", function () {
 
 
 
-$('.burger-button, .filter-button').on('click', function (event) {
-  $('.mobile-menu, .filter-menu, .burger-button, .filter-button, .burger-button__line').toggleClass('active');
+$('.burger-button').on('click', function (event) {
+  $('.mobile-menu, .burger-button, .burger-button__line').toggleClass('active');
 
   $('body').toggleClass('lock');
 });
+
+$('.filter-button').on('click', function (event) {
+  $('.mobile-filter, .filter-button').toggleClass('active');
+
+  $('body').toggleClass('lock');
+});
+
+
 
 $(".logo, .header__menu-link").on("click", function (event) {
   event.preventDefault();
@@ -142,7 +150,7 @@ function initRestaurantSlider() {
     dots: true,
     arrows: false,
     adaptiveHeight: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000
   });
 }
