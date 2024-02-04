@@ -177,86 +177,134 @@
 <section class="catalog section">
   <div class="container">
 
-<h2 class="title">Каталог продуктів</h2>
 
-    <div class="catalog__inner">
-          
-      <aside class="aside catalog__aside">
-
-        <button class="burger-button" type="button">
-      <svg class="pagination__icon pagination__icon--arrow-prev current" width="6" height="11">
-        <use href="images/icon/filter.svg#filter"></use>
-      </svg>
-      <span class="sr-only">Кнопка </span>
-    </button>
-    <div class="mobile-menu">
+<h2 class="title catalog__title">Каталог продуктів</h2>
+    <div class="catalog__box">
+      <button class="_burger-button filter-button" type="button">
+        <svg class="catalog__icon" width="32" height="36">
+          <use href="images/icon/filter.svg#filter"></use>
+        </svg>
+        <span class="sr-only">Кнопка фільтрування</span>
+      </button>
+    <div class="mobile-menu mobile-filter">
       <div class="mobile-menu__inner">
-        <a class="logo" href="#body">
+        <!-- <a class="logo" href="#body">
           <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип"/>
-        </a>
+        </a> -->
         <button class="burger-button burger-button--close" type="button">
           <span class="burger-button__line burger-button__line--close">
           </span>
-          <span class="sr-only">Кнопка меню</span>
+          <span class="sr-only">Кнопка закривання меню</span>
         </button>
       </div>
 
-      <div class="address mobile-menu__address">
-        <ul class="address__list">
-          <li class="address__item">
-            <a class="address__link" href="geo:#">
-              <svg class="address__icon" width="24" height="24">
-                <use href="images/icon/ico.svg#icon-location"></use>
-              </svg>
-              вул. Т.Г.Шевченка, 1
-            </a>
-          </li>
-          <li class="address__item">
-            <a class="address__link" href="tel:+380501112233">
-              <svg class="address__icon" width="24" height="24">
-                <use href="images/icon/ico.svg#icon-call"></use>
-              </svg>
-              380501112233
-            </a>
-          </li>
-          <li class="address__item">
-            <a class="address__link" href="mailto:support@sfood.com">
-              <svg class="address__icon" width="24" height="24">
-                <use href="images/icon/ico.svg#icon-message"></use>
-              </svg>
-              support@sfood.com
-            </a>
-          </li>
-        </ul>
-        <ul class="socials">
-          <li class="socials__inner">
-            <a class="socials__link" target="_blank" href="https://www.facebook.com/">
-              <svg class="socials__icon" width="10" height="21">
-                <use href="images/icon/ico.svg#icon-facebook"></use>
-              </svg>
-              <span class="sr-only"> Посилання на фейсбук </span>
-            </a>
-          </li>
-          <li class="socials__inner">
-            <a class="socials__link" target="_blank" href="https://twitter.com/">
-              <svg class="socials__icon" width="21" height="17">
-                <use href="images/icon/ico.svg#icon-twitter"></use>
-              </svg>
-              <span class="sr-only"> Посилання на твітер </span>
-            </a>
-          </li>
-          <li class="socials__inner">
-            <a class="socials__link" target="_blank" href="https://www.instagram.com/">
-              <svg class="socials__icon" width="20" height="20">
-                <use href="images/icon/ico.svg#icon-instagram"></use>
-              </svg>
-              <span class="sr-only"> Посилання на інстаграм </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+            <aside class="aside">
 
+
+
+
+
+        <div class="aside__item link-categories">
+          <h3 class="aside__title link-categories__title">Категорії</h3>
+          <ul class="link-categories__list">
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Бургери
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Піца
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Сендвічі
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Азійська кухня
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Сети
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Європейська кухня
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Напої
+              </a>
+            </li>
+            <li class="link-categories__item">
+              <a class="link-categories__link" href="#">
+                Алкоголь
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="aside__item filter-offers">
+          <h3 class="aside__title filter-offers__title">Пропозиції</h3>
+          <ul class="filter-offers__list">
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+            <label class="filter-offers__label">
+              <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+              <span class="filter-offers__checkbox">
+              </span>
+              Зі знижкою
+            </label>
+              </form>
+            </li>
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+              <label class="filter-offers__label">
+                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                <span class="filter-offers__checkbox">
+                </span>
+                Новинка
+              </label>
+              </form>
+            </li>
+            <li class="filter-offers__item">
+              <form class="filter-offers__form" action="#" method="post">
+              <label class="filter-offers__label">
+                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                <span class="filter-offers__checkbox">
+                </span>
+                Хіт сезону
+              </label>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="aside__item range-cost">
+          <h3 class="aside__title range-cost__title">Ціна</h3>
+          <form class="range-cost__form" action="#">
+            <label class="range-cost__label">
+              від
+              <input class="range-cost__input--from" type="text" name="" value="0"/>
+              ₴
+            </label>
+            <label class="range-cost__label">
+              до
+              <input class="range-cost__input--to" type="text" name="" value="0"/>
+              ₴
+            </label>
+            <label class="range-cost__label">
+              <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
+            </label>
+          </form>
+        </div>
+      </aside>
+
+    </div>
         <div class="product-sort">
           <form class="product-sort__form"  action="#">
             <select class="product-sort__name-sort select-style" name="name-sort">
@@ -279,6 +327,18 @@
             </select>
           </form>
         </div>
+</div>
+
+
+
+
+    <div class="catalog__inner">
+          
+      <aside class="aside catalog__aside">
+
+
+
+
 
         <div class="aside__item link-categories">
           <h3 class="aside__title link-categories__title">Категорії</h3>

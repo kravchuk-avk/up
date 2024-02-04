@@ -298,5 +298,28 @@
         transform: scale(0);
       }
     }
+    
+  }
+}
+
+
+.filter-button {
+  display: none;
+
+  @include mq("tablet-2", max) {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    z-index: 0;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
+
+    &.active {
+      z-index: -1;
+    }
+
   }
 }

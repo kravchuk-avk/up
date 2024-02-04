@@ -1,6 +1,10 @@
 .breadcrumbs {
   padding: 159px 0 60px;
 
+      @include mq("tablet-2", max) {
+        padding: 72px 0 40px;
+      }
+
   &__list {
     position: relative;
     height: 65px;
@@ -55,10 +59,30 @@
 }
 
 .catalog {
-position: relative;
+  // position: relative;
+&__box {
+    float: inline-end;
+    display: inline-flex;
+    // justify-content: space-between;
+    gap: 20px;
+
+        @include mq("tablet", max) {
+          float: none;
+          display: flex;
+          margin-bottom: 30px;
+        }
+  }
+
+
   &__inner {
   display: flex;
   justify-content: space-between;
+  }
+
+  &__aside {
+        @include mq("tablet-2", max) {
+          display: none;
+        }
   }
 
   &__content {
@@ -75,6 +99,10 @@ position: relative;
     gap: 10px;
     margin-bottom: 60px;
 
+        @include mq("desktop", max) {
+    justify-content: center;
+        }
+
     @include mq("tablet", max) {
       gap: 10px 5px;
       margin-bottom: 30px;
@@ -84,6 +112,7 @@ position: relative;
       grid-template-columns: repeat(2, minmax(0, 170px));
     }
   }
+
 
 }
 
@@ -111,7 +140,7 @@ position: relative;
     padding: 15px;
     border-bottom: 1px solid $bs-item;
 
-    + * {
+    +* {
       padding: 25px 15px;
     }
   }
@@ -230,16 +259,27 @@ position: relative;
 }
 }
 
+
+
+
+
 .product-sort {
-   position: absolute;
+
+  display: inline-flex;
+  // flex-grow: 1;
+  // display: inline-;
+  // text-align: right;
+  // flex-grow: 1;
+  // justify-content: space-between;
+  //  position: absolute;
   //  left: calc(50% + 5px);
     // top: 0;
 // left: 80.7%;
 
-top: 0px;
-left: 55.4%;
-transform: translateX(100%);
-z-index: 5;
+// top: 0px;
+// left: 55.4%;
+// transform: translateX(100%);
+// z-index: 5;
     // width: 100vw;
     // height: 100%;
 // top: 60px;
@@ -276,7 +316,7 @@ z-index: 5;
 
 .jq-selectbox {
   vertical-align: middle;
-  z-index: 10;
+  // z-index: 10;
 
   &__select {
     position: relative;
@@ -358,6 +398,16 @@ z-index: 5;
       display: flex;
       justify-content: center;
       gap: 6px;
+  }
+
+  &__item {
+              @include mq("phone", max) {
+                &:nth-child(3),
+                 &:nth-last-child(3)
+                   {
+                  display: none;
+                }
+              }
   }
 
   &__icon {
