@@ -61,8 +61,8 @@ $inputTo.on("input", function () {
 
 
 
-$('.burger-button').on('click', function (event) {
-  $('.mobile-menu, .burger-button, .burger-button__line').toggleClass('active');
+$('.burger-button, .filter-button').on('click', function (event) {
+  $('.mobile-menu, .filter-menu, .burger-button, .filter-button, .burger-button__line').toggleClass('active');
 
   $('body').toggleClass('lock');
 });
