@@ -1,15 +1,22 @@
-@import 'fonts';
-@import 'global/_reset';
-@import 'libs';
-@import 'vars';
-@import 'global/_global';
-@import 'global/_ints';
+@import 'resources/fonts';
+@import 'resources/_reset';
+@import 'resources/libs';
+@import 'config/vars';
+@import 'config/_global';
+@import 'config/_ints';
 @import 'lego/_header';
-@import 'lego/_hero';
-@import 'lego/_categories';
-@import 'lego/_delivery';
-@import 'lego/_restaurant';
+// @import 'lego/_hero';
+// @import 'lego/_categories';
+// @import 'lego/_delivery';
+// @import 'lego/_restaurant';
 @import 'lego/_reviews';
 @import 'lego/_app';
-@import 'lego/_catalog';
+@import 'lego/_breadcrumbs';
+@import 'lego/_product-card';
+@import 'lego/_app';
+@import 'lego/_app';
+
+
+@import 'pages/_index';
+@import 'pages/_catalog';
 @import 'lego/_footer';

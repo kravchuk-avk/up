@@ -1,83 +1,23 @@
-.breadcrumbs {
-  padding: 159px 0 60px;
-
-      @include mq("tablet-2", max) {
-        padding: 72px 0 40px;
-      }
-
-  &__list {
-    position: relative;
-    height: 65px;
-    display: flex;
-    align-items: center;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
-      height: 100%;
-      z-index: -1;
-      background-color: $accent-01;
-    }
-  }
-
-  &__item {
-    align-items: center;
-  }
-
-  &__link {
-    color: $breadcrumbs;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.42px;
-    border-radius: 5px;
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px $accent-07;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px $default-05;
-    }
-
-    &.current {
-      color: $accent;
-    }
-  }
-
-  &__icon {
-    margin: 0 5px;
-    fill: $border;
-  }
-}
-
 .catalog {
-  // position: relative;
-&__box {
+
+  &__box {
     float: inline-end;
     display: inline-flex;
-    // justify-content: space-between;
     gap: 20px;
 
-        @include mq("tablet", max) {
-          float: none;
-          display: flex;
-          margin-bottom: 30px;
-        }
+    @include mq("tablet", max) {
+      float: none;
+      display: flex;
+      margin-bottom: 30px;
+    }
   }
 
-& .title {
-  @include mq("tablet", max) {
-margin-bottom: 20px;
-}
-}
+  & .title {
+
+    @include mq("tablet", max) {
+      margin-bottom: 20px;
+    }
+  }
 
   &__inner {
   display: flex;
@@ -85,18 +25,17 @@ margin-bottom: 20px;
   }
 
   &__aside {
-        @include mq("tablet-2", max) {
-          display: none;
-        }
+    @include mq("tablet-2", max) {
+      display: none;
+    }
   }
 
   &__content {
     width: 100%;
-        position: relative;
+    position: relative;
   }
 
   &__product-list {
-
     display: grid;
     justify-content: flex-end;
     align-content: center;
@@ -104,9 +43,9 @@ margin-bottom: 20px;
     gap: 10px;
     margin-bottom: 60px;
 
-        @include mq("desktop", max) {
-    justify-content: center;
-        }
+    @include mq("desktop", max) {
+      justify-content: center;
+    }
 
     @include mq("tablet", max) {
       gap: 10px 5px;
@@ -117,18 +56,16 @@ margin-bottom: 20px;
       grid-template-columns: repeat(2, minmax(0, 170px));
     }
 
-& .product-card:nth-child(6) ~ .product-card {
-  @include mq("tablet", max) {
-  display: none;
-  }
-}
-  }
+    & .product-card:nth-child(6) ~ .product-card {
 
-
+      @include mq("tablet", max) {
+        display: none;
+      }
+    }
+  }
 }
 
 .aside {
-  // position: static;
   max-width: 270px;
   width: 100%;
 
@@ -137,10 +74,10 @@ margin-bottom: 20px;
     border: 1px solid $bs-item;
     background-color: $bg-item;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      }
     }
-  }
 
   &__title {
     color: $title;
@@ -171,6 +108,7 @@ margin-bottom: 20px;
     line-height: 1.3;
     letter-spacing: 0.54px;
     border-radius: 5px;
+    transition: box-shadow 0.5s, text-shadow 0.5s, color 0.5s ease-in-out;
 
     &:hover {
       color: $accent;
@@ -191,6 +129,7 @@ margin-bottom: 20px;
   &__label {
     display: flex;
     align-items: center;
+    transition: color 0.5s ease-in-out;
 
     &:hover {
       color: $accent;
@@ -199,6 +138,7 @@ margin-bottom: 20px;
 
   &__input[type="checkbox"] {
     display: none;
+    transition: border-color 0.5s ease-in-out;
 
     &:checked+.filter-offers__checkbox {
       background-image: url('../images/icon/check.svg');
@@ -224,6 +164,7 @@ margin-bottom: 20px;
 }
 
 .range-cost {
+
   &__input {
     background: $bg-plus;
     line-height: 1;
@@ -234,8 +175,13 @@ margin-bottom: 20px;
       border-radius: 3px;
       border: 1px solid $accent-01;
       background: $bg-plus;
-              padding: 7px 5px;
-              text-align: center;
+      padding: 7px 5px;
+      text-align: center;
+      transition: box-shadow 0.5s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 0 2px $accent;
+      }
     }
   }
 
@@ -244,67 +190,39 @@ margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.48px;
-      &:first-child {
-        margin-right: 11px;
+
+    &:first-child {
+      margin-right: 11px;
+    }
   }
+
+  .irs--round .irs-bar {
+    background-color: $accent;
+    height: 2px;
+    }
+
+  .irs--round .irs-handle {
+    background-color: $accent;
+    border: 4px solid $accent;
+    width: 18px;
+    height: 18px;
+    top: 28px;
+    }
+
+  .irs-min,
+  .irs-max,
+  .irs-from,
+  .irs-to {
+    display: none;
   }
-
-.irs--round .irs-bar {
-  background-color: $accent;
-  height: 2px;
 }
-
-.irs--round .irs-handle {
-  background-color: $accent;
-  border: 4px solid $accent;
-  width: 18px;
-  height: 18px;
-  top: 28px;
-}
-
-.irs-min,
-.irs-max,
-.irs-from,
-.irs-to {
-  display: none;
-}
-}
-
-
-
-
 
 .product-sort {
-
-  display: inline-flex;
-  // flex-grow: 1;
-  // display: inline-;
-  // text-align: right;
-  // flex-grow: 1;
-  // justify-content: space-between;
-  //  position: absolute;
-  //  left: calc(50% + 5px);
-    // top: 0;
-// left: 80.7%;
-
-// top: 0px;
-// left: 55.4%;
-// transform: translateX(100%);
-// z-index: 5;
-    // width: 100vw;
-    // height: 100%;
-// top: 60px;
-    
-  @include mq("desktop", max) {
-      //  position: relative;
-      //  transform: none;
-      //  left: 0px;
-  }
 
   &__form {
     display: flex;
     gap: 20px;
-    }
+  }
 
   &__option {
     font-family: Rubik;
@@ -342,7 +260,7 @@ margin-bottom: 20px;
     text-shadow: none;
     display: block;
     width: 100%;
-
+    transition: border-color 0.5s, color 0.5s ease-in-out;
 
     &:hover {
       border-color: $accent;
@@ -375,6 +293,7 @@ margin-bottom: 20px;
     border: none;
     background-image: url('../images/icon/chevron.svg#chevron');
     transform: rotate(90deg);
+    transition: color 0.5s ease-in-out;
 
     &:hover {
       color: $accent-01;
@@ -388,12 +307,13 @@ margin-bottom: 20px;
 
   & li.selected {
     background-color: $accent;
-    color: #fff;
+    color: $bg-item;
   }
 
   & li {
     padding: 5px 10px 6px;
     color: #231f20;
+    transition: background-color 0.5s, color 0.5s ease-in-out;
 
     &:hover {
       background-color: $accent-01;
@@ -401,7 +321,6 @@ margin-bottom: 20px;
     }
   }
 }
-
 
 .pagination {
 
@@ -412,13 +331,13 @@ margin-bottom: 20px;
   }
 
   &__item {
-              @include mq("phone", max) {
-                &:nth-child(3),
-                 &:nth-last-child(3)
-                   {
-                  display: none;
-                }
-              }
+
+    @include mq("phone", max) {
+      &:nth-child(3),
+      &:nth-last-child(3) {
+        display: none;
+      }
+    }
   }
 
   &__icon {
@@ -429,8 +348,8 @@ margin-bottom: 20px;
       transform: rotate(180deg);
     }
 
-  &.current {
-    fill: $border;
+    &.current {
+      fill: $border;
     }
   }
 
@@ -467,19 +386,15 @@ margin-bottom: 20px;
     &.current {
       border: 1px solid $title;
     }
-
   }
-
-
 }
 
 .promo {
   text-align: center;
 
-& .title {
-
-  margin-bottom: 40px;
-}
+  & .title {
+    margin-bottom: 40px;
+  }
 
   &__list {
     display: grid;
@@ -501,12 +416,61 @@ margin-bottom: 20px;
     }
   }
 
-    &__item {
+  &__item {
 
-      @include mq("tablet", max) {
-        margin-bottom: 45px;
-      }
+    @include mq("tablet", max) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.promo-card {
+  max-width: 370px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background-color: $bg-item;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.10);
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 $accent-05;
+  }
+
+  &__link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $bg-item;
+      box-shadow: 0 0 0 2px $accent-07;
+      color: $accent;
     }
 
+    &:focus {
+      background-color: $bg-plus;
+      box-shadow: 0 0 0 2px $accent-07;
+      color: $accent;
+    }
+
+    &:active {
+      background-color: $bg-plus;
+      color: $accent;
+    }
+  }
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 15px 20px;
+  }
 }
 

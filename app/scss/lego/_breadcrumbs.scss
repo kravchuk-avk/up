@@ -1,0 +1,59 @@
+.breadcrumbs {
+  padding: 159px 0 60px;
+
+  @include mq("tablet-2", max) {
+    padding: 72px 0 40px;
+  }
+
+  &__list {
+    position: relative;
+    height: 65px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      z-index: -1;
+      background-color: $accent-01;
+    }
+  }
+
+  &__item {
+    align-items: center;
+  }
+
+  &__link {
+    color: $breadcrumbs;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.42px;
+    border-radius: 5px;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-07;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px $default-05;
+    }
+
+    &.current {
+      color: $accent;
+    }
+  }
+
+  &__icon {
+    margin: 0 5px;
+    fill: $border;
+  }
+}

@@ -1,5 +1,4 @@
 @@include('components/_head.html', { "namePage": "Каталог продуктів" })
-
 @@include('components/_header.html', { 
     'menu': [ 
     { "line": '<a class="menu__link" href="./index.html"> Головна </a></li>' },
@@ -7,7 +6,6 @@
     { "line": '<a class="menu__link" href="#"> Контакти </a></li>' }
     ]
   })
-
 <main class="main">
   <h1 class="sr-only">сервіс доставки їжі</h1>
   @@include('components/_breadcrumbs.html', { 
@@ -16,147 +14,129 @@
     ],
     "span": "Каталог продуктів"
   })
-
-
-
-<section class="catalog section">
-  <div class="container">
-
-
-<h2 class="title">Каталог продуктів</h2>
-    <div class="catalog__box">
-      <button class="filter-button" type="button">
-        <svg class="catalog__icon" width="32" height="36">
-          <use href="images/icon/filter.svg#filter"></use>
-        </svg>
-        <span class="sr-only">Кнопка фільтрування</span>
-      </button>
-    <div class="mobile-filter">
-      <div class="mobile-filter__inner">
-        <!-- <a class="logo" href="#body">
-          <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип"/>
-        </a> -->
-      <button class="filter-button filter-button--close" type="button">
-        <svg class="catalog__icon" width="18" height="18">
-          <use href="images/icon/close.svg#close"></use>
-        </svg>
-        <span class="sr-only">Кнопка фільтрування</span>
-      </button>
-      </div>
-
-            <aside class="aside">
-
-
-
-
-
-        <div class="aside__item link-categories">
-          <h3 class="aside__title link-categories__title">Категорії</h3>
-          <ul class="link-categories__list">
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Бургери
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Піца
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Сендвічі
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Азійська кухня
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Сети
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Європейська кухня
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Напої
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Алкоголь
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="aside__item filter-offers">
-          <h3 class="aside__title filter-offers__title">Пропозиції</h3>
-          <ul class="filter-offers__list">
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-            <label class="filter-offers__label">
-              <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-              <span class="filter-offers__checkbox">
-              </span>
-              Зі знижкою
-            </label>
+  <section class="catalog section"> 
+    <div class="container">
+      <h2 class="title">Каталог продуктів</h2>
+      <div class="catalog__box">
+        <button class="filter-button" type="button">
+          <svg class="catalog__icon" width="32" height="36">
+            <use href="images/icon/filter.svg#filter"></use>
+          </svg>
+          <span class="sr-only">Кнопка фільтрування</span>
+        </button>
+        <div class="mobile-filter">
+          <div class="mobile-filter__inner">
+          <button class="filter-button filter-button--close" type="button">
+            <svg class="catalog__icon" width="18" height="18">
+              <use href="images/icon/close.svg#close"></use>
+            </svg>
+            <span class="sr-only">Кнопка закрити фільтрування</span>
+          </button>
+          </div>
+          <aside class="aside">
+            <div class="aside__item link-categories">
+              <h3 class="aside__title link-categories__title">Категорії</h3>
+              <ul class="link-categories__list">
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Бургери
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Піца
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Сендвічі
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Азійська кухня
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Сети
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Європейська кухня
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Напої
+                  </a>
+                </li>
+                <li class="link-categories__item">
+                  <a class="link-categories__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="aside__item filter-offers">
+              <h3 class="aside__title filter-offers__title">Пропозиції</h3>
+              <ul class="filter-offers__list">
+                <li class="filter-offers__item">
+                  <form class="filter-offers__form" action="#" method="post">
+                <label class="filter-offers__label">
+                  <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                  <span class="filter-offers__checkbox">
+                  </span>
+                  Зі знижкою
+                </label>
+                  </form>
+                </li>
+                <li class="filter-offers__item">
+                  <form class="filter-offers__form" action="#" method="post">
+                  <label class="filter-offers__label">
+                    <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                    <span class="filter-offers__checkbox">
+                    </span>
+                    Новинка
+                  </label>
+                  </form>
+                </li>
+                <li class="filter-offers__item">
+                  <form class="filter-offers__form" action="#" method="post">
+                  <label class="filter-offers__label">
+                    <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                    <span class="filter-offers__checkbox">
+                    </span>
+                    Хіт сезону
+                  </label>
+                  </form>
+                </li>
+              </ul>
+            </div>
+            <div class="aside__item range-cost">
+              <h3 class="aside__title range-cost__title">Ціна</h3>
+              <form class="range-cost__form" action="#">
+                <label class="range-cost__label">
+                  від
+                  <input class="range-cost__input--from" type="text" name="" value="0"/>
+                  ₴
+                </label>
+                <label class="range-cost__label">
+                  до
+                  <input class="range-cost__input--to" type="text" name="" value="0"/>
+                  ₴
+                </label>
+                <label class="range-cost__label">
+                  <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
+                </label>
               </form>
-            </li>
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-              <label class="filter-offers__label">
-                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-                <span class="filter-offers__checkbox">
-                </span>
-                Новинка
-              </label>
-              </form>
-            </li>
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-              <label class="filter-offers__label">
-                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-                <span class="filter-offers__checkbox">
-                </span>
-                Хіт сезону
-              </label>
-              </form>
-            </li>
-          </ul>
+            </div>
+          </aside>
         </div>
-        <div class="aside__item range-cost">
-          <h3 class="aside__title range-cost__title">Ціна</h3>
-          <form class="range-cost__form" action="#">
-            <label class="range-cost__label">
-              від
-              <input class="range-cost__input--from" type="text" name="" value="0"/>
-              ₴
-            </label>
-            <label class="range-cost__label">
-              до
-              <input class="range-cost__input--to" type="text" name="" value="0"/>
-              ₴
-            </label>
-            <label class="range-cost__label">
-              <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
-            </label>
-          </form>
-        </div>
-      </aside>
-
-    </div>
         <div class="product-sort">
           <form class="product-sort__form"  action="#">
             <select class="product-sort__name-sort select-style" name="name-sort">
-              <!-- <svg class="product-sort__icon" width="6" height="11">
-                <use href="images/icon/chevron.svg#chevron"></use>
-              </svg> -->
               <option class="product-sort__option" value="">За назвою</option>
               <option class="product-sort__option" value="">Бургери</option>
               <option class="product-sort__option" value="">Піца</option>
@@ -164,7 +144,6 @@
               <option class="product-sort__option" value="">Азійська кухня Азійська кухня</option>
             </select>
             <select class="product-sort__per-page select-style" name="per-page">
-
               <option class="product-sort__option" value="">по 12</option>
               <option class="product-sort__option" value="">10</option>
               <option class="product-sort__option" value="">15</option>
@@ -173,196 +152,164 @@
             </select>
           </form>
         </div>
-</div>
-
-
-
-
-    <div class="catalog__inner">
-          
-      <aside class="aside catalog__aside">
-
-
-
-
-
-        <div class="aside__item link-categories">
-          <h3 class="aside__title link-categories__title">Категорії</h3>
-          <ul class="link-categories__list">
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Бургери
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Піца
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Сендвічі
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Азійська кухня
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Сети
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Європейська кухня
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Напої
-              </a>
-            </li>
-            <li class="link-categories__item">
-              <a class="link-categories__link" href="#">
-                Алкоголь
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="aside__item filter-offers">
-          <h3 class="aside__title filter-offers__title">Пропозиції</h3>
-          <ul class="filter-offers__list">
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-            <label class="filter-offers__label">
-              <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-              <span class="filter-offers__checkbox">
-              </span>
-              Зі знижкою
-            </label>
-              </form>
-            </li>
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-              <label class="filter-offers__label">
-                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-                <span class="filter-offers__checkbox">
-                </span>
-                Новинка
-              </label>
-              </form>
-            </li>
-            <li class="filter-offers__item">
-              <form class="filter-offers__form" action="#" method="post">
-              <label class="filter-offers__label">
-                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
-                <span class="filter-offers__checkbox">
-                </span>
-                Хіт сезону
-              </label>
-              </form>
-            </li>
-          </ul>
-        </div>
-        <div class="aside__item range-cost">
-          <h3 class="aside__title range-cost__title">Ціна</h3>
-          <form class="range-cost__form" action="#">
-            <label class="range-cost__label">
-              від
-              <input class="range-cost__input--from" type="text" name="" value="0"/>
-              ₴
-            </label>
-            <label class="range-cost__label">
-              до
-              <input class="range-cost__input--to" type="text" name="" value="0"/>
-              ₴
-            </label>
-            <label class="range-cost__label">
-              <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
-            </label>
-          </form>
-        </div>
-      </aside>
-      <div class="catalog__content">
-
-        <div class="catalog__product-list">
-          <!-- @@include('components/_product-card.html', {
-            "imgLink": "images/card/cheese.jpg",
-            "title": "Чізбургер з листям салату",
-            "cost": "160"
-                }) -->
-
-@@include('components/_product-card.html', {
-    "productCard": [ 
-    { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
-    { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
-    { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
-    { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"},
-    { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
-    { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
-    { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
-    { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"},
-    { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
-    { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
-    { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
-    { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"}
-    ]
-  })
-        </div>
-
-
-@@include('components/_pagination.html')
-
-
-
-
-
       </div>
-    </div>
-  </div>
-</section>
-
-@@include('components/_app.html')
-
-
-        <section class="promo section">
-          <div class="container">
-            <h2 class="title">Акції та знижки</h2>
-            <ul class="promo__list">
-
-
-              <li class="promo__item">
-                <article class="promo-card">
-                  <a class="promo-card__link" href="#">
-                    <img class="promo-card__img" src="images/restaurant/restaurant_1.jpg" width="370" height="300" alt="Знижка на другу піцу"/>
-                    <h3 class="promo-card__title">Знижка на другу піцу</h3>
-                      </a>
-                </article>
+      <div class="catalog__inner">
+        <aside class="aside catalog__aside">
+          <div class="aside__item link-categories">
+            <h3 class="aside__title link-categories__title">Категорії</h3>
+            <ul class="link-categories__list">
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Бургери
+                </a>
               </li>
-              <li class="promo__item">
-                <article class="promo-card">
-                  <a class="promo-card__link" href="#">
-                    <img class="promo-card__img" src="images/restaurant/restaurant_5.jpg" width="370" height="300" alt="Картопелька з KFC задарма при замовленні бургера"/>
-                    <h3 class="promo-card__title">Картопелька з KFC задарма при замовленні бургера</h3>
-                      </a>
-                </article>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Піца
+                </a>
               </li>
-              <li class="promo__item">
-                <article class="promo-card">
-                  <a class="promo-card__link" href="#">
-                    <img class="promo-card__img" src="images/restaurant/restaurant_6.jpg" width="370" height="300" alt="Чорні бургери на чорний день"/>
-                    <h3 class="promo-card__title">Чорні бургери на чорний день</h3>
-                      </a>
-                </article>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Сендвічі
+                </a>
               </li>
-
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Азійська кухня
+                </a>
+              </li>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Сети
+                </a>
+              </li>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Європейська кухня
+                </a>
+              </li>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Напої
+                </a>
+              </li>
+              <li class="link-categories__item">
+                <a class="link-categories__link" href="#">
+                  Алкоголь
+                </a>
+              </li>
             </ul>
           </div>
-        </section>
-
-
+          <div class="aside__item filter-offers">
+            <h3 class="aside__title filter-offers__title">Пропозиції</h3>
+            <ul class="filter-offers__list">
+              <li class="filter-offers__item">
+                <form class="filter-offers__form" action="#" method="post">
+              <label class="filter-offers__label">
+                <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                <span class="filter-offers__checkbox">
+                </span>
+                Зі знижкою
+              </label>
+                </form>
+              </li>
+              <li class="filter-offers__item">
+                <form class="filter-offers__form" action="#" method="post">
+                <label class="filter-offers__label">
+                  <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                  <span class="filter-offers__checkbox">
+                  </span>
+                  Новинка
+                </label>
+                </form>
+              </li>
+              <li class="filter-offers__item">
+                <form class="filter-offers__form" action="#" method="post">
+                <label class="filter-offers__label">
+                  <input class="filter-offers__input" type="checkbox" name="filter-offers" value="">
+                  <span class="filter-offers__checkbox">
+                  </span>
+                  Хіт сезону
+                </label>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="aside__item range-cost">
+            <h3 class="aside__title range-cost__title">Ціна</h3>
+            <form class="range-cost__form" action="#">
+              <label class="range-cost__label">
+                від
+                <input class="range-cost__input--from" type="text" name="" value="0"/>
+                ₴
+              </label>
+              <label class="range-cost__label">
+                до
+                <input class="range-cost__input--to" type="text" name="" value="0"/>
+                ₴
+              </label>
+              <label class="range-cost__label">
+                <input class="range-cost__input"  type="text" name="" value="" data-min="65" data-max="1130" data-from="100" data-to="1000"/>
+              </label>
+            </form>
+          </div>
+        </aside>
+        <div class="catalog__content">
+          <div class="catalog__product-list">
+            @@include('components/_product-card.html', {
+              "productCard": [ 
+                { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
+                { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
+                { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
+                { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"},
+                { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
+                { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
+                { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
+                { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"},
+                { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
+                { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
+                { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
+                { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"}
+              ]
+            })
+          </div>
+          @@include('components/_pagination.html')
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('components/_app.html')
+  <section class="promo section">
+    <div class="container">
+      <h2 class="title">Акції та знижки</h2>
+      <ul class="promo__list">
+        <li class="promo__item">
+          <article class="promo-card">
+            <a class="promo-card__link" href="#">
+              <img class="promo-card__img" src="images/restaurant/restaurant_1.jpg" width="370" height="300" alt="Знижка на другу піцу"/>
+              <h3 class="promo-card__title">Знижка на другу піцу</h3>
+            </a>
+          </article>
+        </li>
+        <li class="promo__item">
+          <article class="promo-card">
+            <a class="promo-card__link" href="#">
+              <img class="promo-card__img" src="images/restaurant/restaurant_5.jpg" width="370" height="300" alt="Картопелька з KFC задарма при замовленні бургера"/>
+              <h3 class="promo-card__title">Картопелька з KFC задарма при замовленні бургера</h3>
+            </a>
+          </article>
+        </li>
+        <li class="promo__item">
+          <article class="promo-card">
+            <a class="promo-card__link" href="#">
+              <img class="promo-card__img" src="images/restaurant/restaurant_6.jpg" width="370" height="300" alt="Чорні бургери на чорний день"/>
+              <h3 class="promo-card__title">Чорні бургери на чорний день</h3>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
 </main>
 @@include('components/_footer.html')
 @@include('components/_footer-scripts.html')
