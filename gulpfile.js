@@ -100,7 +100,7 @@ function watching() {
   watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
+  // watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
 exports.htmlInclude   = htmlInclude;
