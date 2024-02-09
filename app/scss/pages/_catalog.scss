@@ -24,39 +24,20 @@
   justify-content: space-between;
   }
 
-  &__aside {
-    @include mq("tablet-2", max) {
-      display: none;
-    }
-  }
-
   &__content {
     width: 100%;
     position: relative;
   }
 
-  &__product-list {
-    display: grid;
+  & .categories__product-list {
     justify-content: flex-end;
-    align-content: center;
-    grid-template-columns: repeat(auto-fill, 210px);
     gap: 10px;
-    margin-bottom: 60px;
 
     @include mq("desktop", max) {
       justify-content: center;
     }
 
-    @include mq("tablet", max) {
-      gap: 10px 5px;
-      margin-bottom: 30px;
-    }
-
-    @include mq("phone", max) {
-      grid-template-columns: repeat(2, minmax(0, 170px));
-    }
-
-    & .product-card:nth-child(6) ~ .product-card {
+    & .categories__product-item:nth-child(6)~.categories__product-item {
 
       @include mq("tablet", max) {
         display: none;
@@ -65,11 +46,21 @@
   }
 }
 
-.aside {
+.sidebar {
   max-width: 270px;
   width: 100%;
 
-  &__item{
+  @include mq("tablet-2", max) {
+    display: none;
+
+    &--mobile {
+      max-width: 270px;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__inner {
     border-radius: 5px;
     border: 1px solid $bs-item;
     background-color: $bg-item;
@@ -92,14 +83,11 @@
       padding: 25px 15px;
     }
   }
-}
-
-.link-categories {
 
   &__item {
   
     &:not(:last-child) {
-      margin-bottom: 11px;
+      margin-bottom: 12px;
     }
   }
 
@@ -122,14 +110,16 @@
       text-shadow: 2px 2px 5px $default-05;
     }
   }
-}
 
-.filter-offers {
+  &__form {
+    display: inline-flex;
+  }
 
   &__label {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     transition: color 0.5s ease-in-out;
+    line-height: 1;
 
     &:hover {
       color: $accent;
@@ -138,18 +128,18 @@
 
   &__input[type="checkbox"] {
     display: none;
-    transition: border-color 0.5s ease-in-out;
 
-    &:checked+.filter-offers__checkbox {
+
+    &:checked+.sidebar__checkbox {
       background-image: url('../images/icon/check.svg');
       background-repeat: no-repeat;
       background-position: center;
       border: 1px solid $title;
     }
 
-    &:hover+.filter-offers__checkbox,
-    &:focus+.filter-offers__checkbox {
-      border: 1px solid $accent;
+    &:hover+.sidebar__checkbox,
+    &:focus+.sidebar__checkbox {
+      border-color: $accent;
     }
   }
 
@@ -160,6 +150,96 @@
     border-radius: 3px;
     border: 1px solid $bs-item;
     background-color: $accent-02;
+    transition: border-color 0.5s ease-in-out;
+  }
+}
+
+.filter-button {
+  display: none;
+
+  @include mq("tablet-2", max) {
+    width: 47px;
+    height: 47px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    z-index: 0;
+    fill: $accent;
+    background-color: $accent-01;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s ease-in-out;
+
+    &.active {
+      z-index: 0;
+    }
+
+    &--close {
+      fill: $title;
+      margin-left: auto;
+    }
+
+  }
+}
+
+.mobile-filter {
+  display: none;
+
+  @include mq("tablet-2", max) {
+    position: absolute;
+    left: 0;
+    right: 55px;
+    top: 0;
+    height: 100vh;
+    display: block;
+    // overflow-Y: auto;
+    z-index: 4;
+    // padding: 0 15px;
+    transform: translate(-50%, -150%);
+    transition: transform 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-menu-05;
+      height: 100%;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $bg-item;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &.active {
+      transform: translate(0);
+      position: fixed;
+    }
+
+    &.sidebar {
+      display: flex;
+    }
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      padding: 0;
+    }
   }
 }
 
@@ -184,6 +264,7 @@
       }
     }
   }
+  
 
   &__label {
     color: $border;
@@ -212,6 +293,7 @@
   .irs-min,
   .irs-max,
   .irs-from,
+  .irs-single,
   .irs-to {
     display: none;
   }
@@ -272,6 +354,8 @@
   &__select-text {
     display: block;
     width: 100%;
+    color: $title;
+
     @include char-clamp(10);
   }
 
@@ -303,6 +387,8 @@
   &__dropdown {
     background-color: $bg-item;
     width: -webkit-fill-available;
+    box-shadow: 0 0 0 2px $border-plus;
+    ;
   }
 
   & li.selected {
@@ -348,12 +434,9 @@
       transform: rotate(180deg);
     }
 
-    &.current {
-      fill: $border;
-    }
   }
 
-  &__link {
+  &__link, &__btn-arrow {
     width: 48px;
     height: 48px;
     display: flex;
@@ -383,17 +466,27 @@
       box-shadow: 0px -1px 4px 2px $bg-menu-015 inset;
     }
 
+    &:disabled {
+    color: $border;
+    background-color: $accent-01;
+    }
+
     &.current {
       border: 1px solid $title;
+      background-color: $accent-01;
+      color: $title;
     }
   }
 }
 
 .promo {
-  text-align: center;
 
-  & .title {
-    margin-bottom: 40px;
+  @include mq("tablet", max) {
+    text-align: center;
+
+    & .title {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {

@@ -4,18 +4,20 @@ $(function(){
 
 
 // бегунок
-var $range = $(".range-cost__input"),
+
+var $range = $(".js-range-slider"),
     $inputFrom = $(".range-cost__input--from"),
     $inputTo = $(".range-cost__input--to"),
-    instance,    
+    instance,
     min = min,
     max = max,
     from = from,
     to = to;
 
-$('.range-cost__input').ionRangeSlider({
-        type: "double",
-        skin: "round",
+$range.ionRangeSlider({
+	skin: "round",
+    type: "double",
+
     onStart: updateInputs,
     onChange: updateInputs
 });
@@ -110,7 +112,7 @@ $('.reviews__box').slick({
   // appendDots: $('.reviews__nav'),
   nextArrow: '<button class="reviews__btn reviews__btn--next" type="button"><svg class="reviews__icon reviews__icon--next-arrow" width="19" height="11"><use href="images/icon/ico.svg#icon-nextarrow"></use></svg> <span class="sr-only">Наступний відгук</span></button>',
   fade: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000,
 
 
