@@ -78,9 +78,6 @@ body {
   }
 }
 
-
-
-
 .sub-form {
   display: inline-flex;
   flex-direction: column;
@@ -221,5 +218,23 @@ body {
       background-color: $accent-01;
       color: $accent;
     }
+  }
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, 210px);
+  gap: 30px;
+  margin-bottom: 60px;
+
+  @include mq("tablet", max) {
+    gap: 10px 5px;
+    margin-bottom: 30px;
+  }
+
+  @include mq("phone", max) {
+    grid-template-columns: repeat(2, minmax(0, 170px));
   }
 }
