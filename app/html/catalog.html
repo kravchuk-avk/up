@@ -1,5 +1,5 @@
-@@include('components/_head.html', { "namePage": "Каталог продуктів" })
-@@include('components/_header.html', { 
+@@include('components/head.html', { "namePage": "Каталог продуктів" })
+@@include('components/header.html', { 
     'menu': [ 
     { "line": '<a class="menu__link" href="./index.html"> Головна </a></li>' },
     { "line": '<span class="menu__link current"> Страви </span></li>' },
@@ -7,7 +7,7 @@
     ]
   })
 <main class="main">
-  @@include('components/_breadcrumbs.html', { 
+  @@include('components/breadcrumbs.html', { 
     "breadcrumbs": [ 
     { "url": "./index.html", "label": "Головна" }
     ],
@@ -23,22 +23,16 @@
           </svg>
           <span class="sr-only">Кнопка фільтрування</span>
         </button>
-        <div class="mobile-filter">
-          <div class="mobile-filter__inner">
-          <button class="filter-button filter-button--close" type="button">
-            <svg class="catalog__icon" width="18" height="18">
-              <use href="images/icon/close.svg#close"></use>
-            </svg>
-            <span class="sr-only">Кнопка закрити фільтрування</span>
-          </button>
-          </div>
-          @@include('components/_sidebar.html', {
-            "sidebar": "sidebar--mobile"
-          })
-        </div>
+        <!-- <div class="mobile-filter">
+          <div class="mobile-filter__inner"> -->
+
+        <!-- </div> -->
+          <!-- @@include('components/sidebar.html') -->
+        <!-- </div> -->
         <div class="product-sort">
           <form class="product-sort__form"  action="#">
-            <label class="range-cost__label">
+            <label class="product-sort__label">
+              <span class="sr-only"> Сортувати за назвою </span>
               <select class="product-sort__name-sort select-style" name="name-sort">
                 <option class="product-sort__option" value="">За назвою</option>
                 <option class="product-sort__option" value="">Бургери</option>
@@ -47,7 +41,8 @@
                 <option class="product-sort__option" value="">Азійська кухня Азійська кухня</option>
               </select>
             </label>
-            <label class="range-cost__label">
+            <label class="product-sort__label">
+              <span class="sr-only"> Відобразити по кількості </span>
               <select class="product-sort__per-page select-style" name="per-page">
                 <option class="product-sort__option" value="">по 12</option>
                 <option class="product-sort__option" value="">10</option>
@@ -60,11 +55,54 @@
         </div>
       </div>
       <div class="catalog__inner">
-          @@include('components/_sidebar.html', {
+          @@include('components/sidebar.html', {
             "sidebar": "sidebar"
           })
         <div class="catalog__content">
-            @@include('components/_product-card.html', {
+          <ul class="grid">
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"
+              })
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"
+              })
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"
+              })
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"})
+            </li>
+            <li class="grid__item">
+              @@include('components/product-card.html', { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"})
+            </li>
+          </ul>
+
+      
+            <!-- @@include('components/product-card.html', {
               "productCard": [ 
                 { "href": "#", "imgLink": "./images/card/cheese.jpg", "alt": "Чізбургер з листям салату", "title": "Чізбургер з листям салату", "price": "160"},
                 { "href": "#", "imgLink": "./images/card/bifburger.png", "alt": "Біфбургер", "title": "Біфбургер", "price": "190"},
@@ -79,13 +117,14 @@
                 { "href": "#", "imgLink": "./images/card/royal.jpg", "alt": "Королівський чізбургер", "title": "Королівський чізбургер", "price": "260"},
                 { "href": "#", "imgLink": "./images/card/black.jpg", "alt": "Чорний гамбургер", "title": "Чорний гамбургер", "price": "199"}
               ]
-            })
-          @@include('components/_pagination.html')
+            }) -->
+
+          @@include('components/pagination.html')
         </div>
       </div>
     </div>
   </section>
-  @@include('components/_app.html')
+  @@include('components/app.html')
   <section class="promo section">
     <div class="container">
       <h2 class="title">Акції та знижки</h2>
@@ -118,5 +157,5 @@
     </div>
   </section>
 </main>
-@@include('components/_footer.html')
-@@include('components/_footer-scripts.html')
+@@include('components/footer.html')
+@@include('components/footer-scripts.html')
