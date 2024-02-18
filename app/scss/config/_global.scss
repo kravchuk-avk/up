@@ -21,6 +21,17 @@ body {
 
   &.lock {
     overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-menu-05;
+      height: 100%;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
   }
 }
 
